@@ -1,0 +1,200 @@
+@import "partials/vars";
+
+@media (max-width: 767px)
+{
+  #block p.p-d
+  {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  #block #email {
+    box-sizing: border-box;
+    width: 73.5vw;
+  }
+}
+
+#block {
+  z-index: 1;
+  overflow: hidden;
+  background-image: url(../img/fin-bg.png);
+  background-size: cover;
+  background-color: $dark;
+  height: 100vh;
+  background-position: 50%;
+}
+.cont-jobs {
+  max-width: 790px;
+  padding-top: 216px;
+  margin: 0 auto;
+  text-align: center;
+  h1.mainheadline
+  {
+    margin-top: 45px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+  }
+  .p-d
+  {
+    font-family: "Lato Real Regular";
+    margin-top: 20px;
+    letter-spacing: -0.5px;
+    margin-left: -47px;
+    font-size: 17px;
+  }
+}
+
+.finlogo {
+  img
+  {
+    width: 221px;
+    height: auto;
+  }
+}
+
+.fin_under_h3 {
+  font-family: "Lato Real Regular";
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.27;
+  letter-spacing: 0.6px;
+  text-decoration: underline;
+  color: $white;
+}
+
+.column {
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  .header {
+    font-size: 16rem;
+    font-weight: bold;
+  }
+  .body {
+    margin-top: 14px;
+    .section {
+      display: block;
+      font-size: 14rem;
+      font-weight: 500;
+      line-height: 29px;
+      color: #ededed;
+      text-decoration: none;
+    }
+    a.section:hover {
+      color: $topaz;
+    }
+  }
+  #email {
+    box-sizing: border-box;
+    width: 277.7px;
+    outline: none;
+    vertical-align: top;
+    margin-top: -3px;
+    padding: 6.7px 11px 7px 20px;
+    border: solid 1px #979797;
+    border-radius: 6px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #9b9b9b;
+    display: inline-block;
+    margin-right: 7px;
+  }
+  #email:-ms-input-placeholder{
+    font-size: 15.5px;
+    font-family: "Lato Light";
+    font-weight: 100;
+    line-height: 24px;
+    color: #9b9b9b;
+  }
+  #email:-moz-placeholder
+  {
+    font-size: 15.5px;
+    font-family: "Lato Light";
+    font-weight: 100;
+    line-height: 24px;
+    color: #9b9b9b;
+  }
+  #email::-webkit-input-placeholder
+  {
+    font-size: 15.5px;
+    font-family: "Lato Light";
+    font-weight: 100;
+    line-height: 24px;
+    color: #9b9b9b;
+  }
+  #email:placeholder {
+    font-size: 15.5px;
+    font-family: "Lato Light";
+    font-weight: 100;
+    line-height: 24px;
+    color: #9b9b9b;
+  }
+  button {
+    display: none;
+  }
+  .button:hover
+  {
+    background-color: #148e77;
+    img
+    {
+      filter: brightness(74%);
+      -moz-filter: brightness(74%);
+      -ms-filter: brightness(74%);
+      -webkit-filter: brightness(74%);
+    }
+  }
+  .button {
+    display: inline-block;
+    background-color: $topaz;
+    padding: 9px 10px 7px 10px;
+    box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    margin-top: -4px;
+  }
+  button:active + .button {
+    background-color: #148e77;
+    box-shadow: inset 1px 1px 0px 1px black !important;
+    padding: 10px 9px 6px 11px !important;
+  }
+}
+#subscribe-popup {
+  label {
+    button {
+      display: none;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .cont-jobs {
+    padding-top: 230px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cont-jobs {
+    padding-top: 80px;
+  }
+}

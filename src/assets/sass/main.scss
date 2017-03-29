@@ -1,0 +1,186 @@
+@import "bootstrap";
+
+$brownish-grey: #626262;
+$grey_outlines: #d8d8d8;
+$topaz: #1abc9c;
+
+html
+{
+font-size: 1px;
+}
+
+.headerr
+{
+    text-align: justify;
+}
+
+.step-header
+{
+    display: block;
+    padding: 20px 0;
+    font-family: "Lato Regular";
+    font-size: 17px;
+    letter-spacing: 0.7px;
+    color: $topaz;
+    border-bottom: 1px solid $topaz;
+}
+
+.headerr:after
+{
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.abstract
+{
+    font-family: "Lato Regular";
+}
+    .text
+    {
+        @extend .abstract;
+
+        color: $brownish-grey;
+        font-size: 15rem;
+    }
+        .header
+        {
+            @extend .text;
+            display: inline-block;
+
+            font-weight: bold;
+            line-height: 1.6;
+            margin-top: 18px;
+        }
+        .paragraph
+        {
+            @extend .text;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+            .tip
+            {
+                @extend .paragraph;
+
+                border: solid 2px $topaz;
+                border-radius: 7px;
+
+                padding: 22px 26px 22px 26px;
+            }
+            .tip:before
+            {
+                content: "Hauskontor Tipp:";
+                display: block;
+                color: $topaz;
+            }
+        .check
+        {
+            border-bottom: solid 1px $grey_outlines;
+            padding-bottom: 6px;
+            .checkbox
+            {
+                float: right;
+            }
+        }
+    .control
+    {
+        @extend .abstract;
+
+        margin-top: 7px;
+        font-size: 15rem;
+    }
+        .native
+        {
+            @extend .control;
+
+            padding: 7px 16px 11px 16px;
+            border: solid 1px #cccccc;
+            border-radius: 4px;
+            width: 100%;
+
+            color: black;
+            line-height: 1.47;
+            font-style: italic;
+            font-weight: 300;
+        }
+        .native:-ms-placeholder,
+        .native:-moz-placeholder,
+        .native:-webkit-placeholder,
+        .native:placeholder
+        {
+
+        }
+        .decorated
+        {
+            @extend .control;
+
+            display: inline-block;
+            input
+            {
+                display: none;
+            }
+            label
+            {
+            }
+        }
+            .checkbox
+            {
+                @extend .decorated;
+
+                margin-left: 10rem;
+                margin-right: 26.6rem;
+                label
+                {
+                    display: block;
+                    box-sizing: border-box;
+                    width: 20rem;
+                    height: 20rem;
+
+                    border: solid 1px $brownish-grey;
+                    text-align: center;
+                }
+                input:checked+label
+                {
+                    background-image: url(../img/checkbox.png);
+                }
+            }
+                .radio
+                {
+                    @extend .checkbox;
+                }
+            .button
+            {
+                @extend .decorated;
+                label
+                {
+                    color: white;
+
+                    -ms-user-select: none;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    user-select: none;
+
+                    border-radius: 5px;
+                    padding: 13px 40px 13px 40px;
+
+                    background-color: $topaz;
+                }
+                input:active+label
+                {
+                    box-shadow: inset 0 0 10px -2px black;
+                }
+            }
+
+.step
+{
+    border-radius: 70px;
+    box-sizing: border-box;
+    border: solid 1px #cccccc;
+    padding: 13px 0;
+    width: 180px;
+    display: inline-block;
+    font-family: "Lato Regular";
+    font-size: 12px;
+    text-align: center;
+    color: #cccccc;
+}

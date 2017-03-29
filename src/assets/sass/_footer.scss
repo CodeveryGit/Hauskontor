@@ -1,0 +1,245 @@
+@media screen and (max-width: $screen-sm-min)
+{
+    footer#footer
+    {
+        background-color: $dark;
+        text-align: left;
+        padding: 51px 0 1px 40px;
+        color: white;
+        .wrapper
+        {
+            margin-top: 16px;
+            .column
+            {
+                .header
+                {
+                    font-size: 15rem;
+                    font-weight: bold;
+                    line-height: 1.4;
+                }
+                .body
+                {
+                    margin-top: 11px;
+                    margin-bottom: 47px;
+                    .section
+                    {
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 2.29;
+                        color: #ededed;
+                        text-decoration: none;
+                    }
+                    .section:hover
+                    {
+                        color: brown;
+                    }
+                    input#email
+                    {
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 1.6;
+                        color: #9b9b9b;
+
+                        padding: 7px 17px;
+                        border: solid 1px #979797;
+                        border-radius: 6px;
+                        width: 257px;
+                    }
+                    @media screen and (max-width: 374px)
+                    {
+                        input#email
+                        {
+                            width: 50vw;
+                        }
+                    }
+                    label {
+                        display: block;
+                        button {
+                            display: none;
+                        }
+                        .button {
+                            margin-top: 21px;
+                            padding: 10px 24px 11px 24px;
+                            font-size: 15px;
+                            font-weight: bold;
+                            text-align: center;
+                            color: white;
+
+                            display: inline-block;
+                            border-radius: 7px;
+                            background-color: $topaz;
+                            box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.5);
+                        }
+                        button:active+.button
+                        {
+                            box-shadow: inset 1px 1px 0px 1px black !important;
+                            padding: 12px 22px 9px 26px !important;
+                        }
+                    }
+                    #social
+                    {
+                        position: relative;
+                        padding-top: 14px;
+                        img
+                        {
+                            width: 32px;
+                            height: 32px;
+                            position: absolute;
+                        }
+
+                        #facebook
+                        {
+                            left: 0;
+                        }
+                        #twitter
+                        {
+                            left: 66px;
+                        }
+
+                        #linkedIn
+                        {
+                            left: 132px;
+                        }
+                    }
+                    #copyright
+                    {
+                        margin-left: 2px;
+                        margin-top: 53px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #ededed;
+                    }
+                }
+            }
+            .column#UnsereTools
+            {
+                .body
+                {
+                    margin-top: 14px;
+                    margin-bottom: 50px;
+                }
+            }
+            .column#TestenSieHauskontor
+            {
+                .body
+                {
+                    margin-top: 16px;
+                }
+            }
+            .column#LetsContinueTheConversation
+            {
+                margin-top: 54px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-sm-min)
+{
+    footer#footer {
+        background-color: $dark;
+        padding: 41px 129.2px 69.2px 94px;
+        color: white;
+        .wrapper {
+            margin-top: 19px;
+            text-align: justify;
+            .column {
+                position: relative;
+                vertical-align: top;
+                display: inline-block;
+                .header {
+                    font-size: 16rem;
+                    font-weight: bold;
+                }
+                .body {
+                    margin-top: 24px;
+                    .section {
+                        display: block;
+                        font-size: 14rem;
+                        font-weight: 500;
+                        line-height: 29px;
+                        color: #ededed;
+                        text-decoration: none;
+                    }
+                    .section:hover {
+                        color: brown;
+                    }
+                }
+                #email {
+                    margin-top: -3px;
+                    padding: 6.7px 15px 6px 15px;
+                    border: solid 1px #979797;
+                    border-radius: 6px;
+                    font-size: 15px;
+                    line-height: 24px;
+                    color: #9b9b9b;
+                    display: block;
+                    width: 168px;
+                }
+                #email:-ms-placeholder,
+                #email:-moz-placeholder,
+                #email:-webkit-placeholder,
+                #email:placeholder {
+                    font-size: 15px;
+                    font-weight: 100;
+                    line-height: 24px;
+                    color: #9b9b9b;
+                }
+                button {
+                    display: none;
+                }
+                .button {
+                    margin-top: 19.4px;
+                    display: inline-block;
+                    background-color: $topaz;
+                    padding: 9.6px 23.5px 12.4px 23.5px;
+                    box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.5);
+                    border-radius: 7px;
+
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-align: center;
+                    color: white;
+
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+                button:active+.button
+                {
+                    box-shadow: inset 1px 1px 0px 1px black !important;
+                    padding: 11.6px 21.5px 10.4px 25.5px !important;
+                }
+                #social {
+                    img {
+                        height: 32px;
+                        width: 32px;
+                        margin-right: 21px;
+                    }
+                }
+                #copyright {
+                    margin-top: 36px;
+                    font-size: 14rem;
+                    font-weight: bold;
+                    color: #ededed;
+                }
+            }
+            .column#UnsereTools {
+                left: 7px;
+            }
+            .column#TestenSieHauskontor {
+                left: 36px;
+            }
+            .column#LetsContinueTheConversation {
+                left: -1px;
+            }
+        }
+        .wrapper:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+extends tmpl/_header
+block template
+    //
+        Template Name: Impressum
+
+block body
+    body
+        div.head.clearfix.hide-notmobile.fixedhead
+            div.logo
+                a(href!="<?php the_field('header_logo_link', 456); ?>")
+                    img(src!="<?php the_field('header_logo', 456); ?>")
+            | <?php if (is_user_logged_in()): ?>
+            a(href!="<?php the_field('loggined_button_link', 456); ?>")
+                button.return.signup.login <?php the_field('loggined_button_text', 456); ?>
+            | <?php else: ?>
+            a(href!="<?php the_field('mobile_button_link', 456); ?>")
+                button.signup.login.Einloggen <?php the_field('mobile_button_text', 456); ?>
+            | <?php endif; ?>
+            div.phone.fixedphone
+                a(href!="<?php the_field('phone_link', 456); ?>")
+                    img(src!="<?php the_field('phone_icon', 456); ?>")
+                    div#shadow
+        div#block1.impressum
+            div.head.clearfix.hide-onmobile
+                div.logo
+                    a(href!="<?php the_field('header_logo_link', 456); ?>")
+                        img(src!="<?php the_field('header_logo', 456); ?>")
+                | <?php if (is_user_logged_in()): ?>
+                a(href!="<?php the_field('loggined_button_link', 456); ?>")
+                    button.return.signup.login <?php the_field('loggined_button_text', 456); ?>
+                | <?php else: ?>
+                a(href!="<?php the_field('second_button_link', 456); ?>")
+                    button.signup.login <?php the_field('second_button_text', 456); ?>
+                a(href!="<?php the_field('first_button_link', 456); ?>")
+                    button.signup.whitehov <?php the_field('first_button_text', 456); ?>
+                | <?php endif; ?>
+                div.info
+                    p.infotext <?php the_field('phone_number', 456); ?>
+            div.cont.cont-impressum
+                h1.mainheadline#h1 <?php the_field('impressum_header'); ?>
+                h3.stepsheadline.h3-impressum <?php the_field('impressum_header_line'); ?>
+
+        div#impressum.clearfix
+            h3.headline2.nomarg.marg-b <?php the_field('impressum_information_header'); ?>
+            div.clearfix
+                div.contacts
+                    p.contacts-p.
+                        <?php the_field('impressum_information_column1'); ?>
+                div.contacts
+                    p.contacts-p.
+                        <?php the_field('impressum_information_column2'); ?>
+                div.contacts
+                    p.contacts-p.
+                        <?php the_field('impressum_information_column3'); ?>
+            div.p-link
+                p.contacts-p.
+                    <?php the_field('impressum_information_text'); ?>
+            div.impressum-content <?php the_post(); echo apply_filters('the_content', get_the_content()); ?>
+        include tmpl/_footer

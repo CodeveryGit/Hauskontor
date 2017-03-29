@@ -1,0 +1,244 @@
+extends tmpl/_header
+block template
+    //Template Name: Landing A
+
+block body
+    body
+        img(class="preload", src!="<?php the_field('background'); ?>", style="display: none;")
+        div.head.clearfix.hide-notmobile.fixedhead
+            div.logo
+                a(href!="<?php the_field('header_logo_link', 456); ?>")
+                    img(src!="<?php the_field('header_logo', 456); ?>")
+            | <?php if (is_user_logged_in()): ?>
+            a(href!="<?php the_field('loggined_button_link', 456); ?>")
+                button.return.signup.login <?php the_field('loggined_button_text', 456); ?>
+            | <?php else: ?>
+            a(href!="<?php the_field('mobile_button_link', 456); ?>")
+                button.signup.login.Einloggen <?php the_field('mobile_button_text', 456); ?>
+            | <?php endif; ?>
+            div.phone.fixedphone
+                a(href!="<?php the_field('phone_link', 456); ?>")
+                    img(src!="<?php the_field('phone_icon', 456); ?>")
+                    div#shadow
+        div#block1.video-block(style!="background-image: url(<?php the_field('background'); ?>);")
+            | <?php $video = get_field('background_video'); if ($video): ?>
+            video(id="header-video", autoplay="autoplay", loop="loop").hide-onmobile
+                source(src!="<?php echo $video; ?>")
+            | <?php endif; ?>
+            div.head.clearfix.hide-onmobile
+                div.logo
+                    a(href!="<?php the_field('header_logo_link', 456); ?>")
+                        img(src!="<?php the_field('header_logo', 456); ?>")
+                | <?php if (is_user_logged_in()): ?>
+                a(href!="<?php the_field('loggined_button_link', 456); ?>")
+                    button.return.signup.login <?php the_field('loggined_button_text', 456); ?>
+                | <?php else: ?>
+                a(href!="<?php the_field('second_button_link', 456); ?>")
+                    button.signup.login <?php the_field('second_button_text', 456); ?>
+                a(href!="<?php the_field('first_button_link', 456); ?>")
+                    button.signup.whitehov <?php the_field('first_button_text', 456); ?>
+                | <?php endif; ?>
+                div.info
+                    p.infotext <?php the_field('phone_number', 456); ?>
+            div.cont
+                h1.mainheadline#h1 <?php the_field('1sect_h1'); ?>
+                h3.headline#h3 <?php the_field('1st_sect_h2'); ?>
+                p.headline.p1.hide-onmobile <?php the_field('1st_sect_p'); ?>
+                div.btndiv
+                    a(href!="<?php the_field('mid_button_link'); ?>")
+                        button.btn-land <?php the_field('mid_button_text'); ?>
+        div#block2
+            div.content.clearfix.padbot
+                div.lefttext
+                    h2.headline2.nomarg <?php the_field('2nd_section_h1'); ?>
+                    p.padtwony.p2.nopad#padp1 <?php the_field('2nd_sect_p_1'); ?>
+                    p.padtwony.p2.nopad#padp <?php the_field('2nd_sect_p_2'); ?>
+                    p.padtwony.p2.nopad.moblastp#padp3  <?php the_field('2nd_sect_p_3'); ?>
+                div.pict
+                    img(src!="<?php the_field('2sect_img'); ?>").building.hide-onmobile
+                    img(src!="<?php the_field('2sect_img_mob'); ?>").building.hide-notmobile.mobimg
+        div(style!="background-image: url(<?php the_field('3rd_sect_background'); ?>)")#block3
+            div.content.clearfix
+                div.backgroundgradient
+                h3.headline2.h2white <?php the_field('3rd_sect_h1'); ?>
+                div.block.hide-onmobile
+                    div.quater
+                        div.circle 1
+                    div.quater
+                        div.circle 2
+                    div.quater
+                        div.circle 3
+                    div.quater
+                        div.circle 4
+                    div.line
+                    div.steps
+                        h3.stepsheadline <?php the_field('3rd_sect_h3_1'); ?>
+                    div.steps
+                        h3.stepsheadline <?php the_field('3rd_sect_h3_2'); ?>
+                    div.steps
+                        h3.stepsheadline <?php the_field('3rd_sect_h3_3'); ?>
+                    div.steps
+                        h3.stepsheadline <?php the_field('3rd_sect_h3_4'); ?>
+                div.block.hide-notmobile
+                    div.steps
+                        div.quater
+                            div.circle 1
+                        div.quater
+                            div.circle 2
+                        div.quater
+                            div.circle 3
+                        div.quater
+                            div.circle 4
+                    div.vertline
+                    div.stepstext
+                        div.quater
+                            h3.stepsheadline.quat <?php the_field('3rd_sect_h3_1'); ?>
+                        div.quater
+                            h3.stepsheadline.quat <?php the_field('3rd_sect_h3_2'); ?>
+                        div.quater
+                            h3.stepsheadline.quat <?php the_field('3rd_sect_h3_3'); ?>
+                        div.quater
+                            h3.stepsheadline.quat <?php the_field('3rd_sect_h3_4'); ?>
+        div#block4
+            div.content
+                h3.headline2 <?php the_field('4th_sect_h1'); ?>
+                div.contain.hide-onmobile
+                    div.row.imgmax
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img1'); ?>")#img1
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img2'); ?>")#img2
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img3'); ?>")#img3
+                    div.row.imgmax.padthirty
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.firsth4 <?php the_field('4th_h4_for_img1'); ?>
+                            p.padtwony.p2.p3.notbold.textwidth#1stp <?php the_field('4th_p_for_img1'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.second-h4 <?php the_field('4th_h4_for_img2'); ?>
+                            p.padtwony.p2.p3.textwidth.padtopten <?php the_field('4th_p_for_img2'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth <?php the_field('4th_h4_for_img3'); ?>
+                            p.padtwony.p2.p3.textwidth.thirdp.padtopten <?php the_field('4th_p_for_img3'); ?>
+                    div.row.imgmax.padfifty
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img4');s ?>")#img4
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img5'); ?>")#img5
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img6'); ?>")#img6
+                    div.row.imgmax.padthirty#lastline
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.firsth4 <?php the_field('4th_h4_for_img4'); ?>
+                            p.padtwony.p2.p3.textwidth.padtopten <?php the_field('4th_p_for_img4'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.second-h4 <?php the_field('4th_h4_for_img5'); ?>
+                            p.padtwony.p2.p3.textwidth.padtopten.second-h4 <?php the_field('4th_p_for_img5'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth#last-h4 <?php the_field('4th_h4_for_img6'); ?>
+                            p.padtwony.p2.p3.textwidth.thirdp.padtopten.last-p <?php the_field('4th_p_for_img6'); ?>
+                div.contain.hide-notmobile
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img1'); ?>").img1
+                            h4.stepsheadline.dark.textwidth <?php the_field('4th_h4_for_img1'); ?>
+                            p.padtwony.p2.p3.notbold.textwidth.firstmobp <?php the_field('4th_p_for_img1'); ?>
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img2'); ?>").img2
+                            h4.stepsheadline.dark.textwidth.second-mobile-h4 <?php the_field('4th_h4_for_img4'); ?>
+                            p.padtwony.p2.p3.textwidth.second-mobile-p <?php the_field('4th_p_for_img4'); ?>
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img3'); ?>").img3
+                            h4.stepsheadline.dark.textwidth <?php the_field('4th_h4_for_img2'); ?>
+                            p.padtwony.p2.p3.textwidth.third-mobile-p <?php the_field('4th_p_for_img2'); ?>
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img4'); ?>").img4
+                            h4.stepsheadline.dark.textwidth <?php the_field('4th_h4_for_img5'); ?>
+                            p.padtwony.p2.p3.textwidth.fourthp <?php the_field('4th_p_for_img5'); ?>
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img5'); ?>").img5
+                            h4.stepsheadline.dark.textwidth <?php the_field('4th_h4_for_img3'); ?>
+                            p.padtwony.p2.p3.textwidth <?php the_field('4th_p_for_img3'); ?>
+                        div.custom1
+                            img(src!="<?php the_field('4th_sect_img6'); ?>").img6
+                            h4.stepsheadline.dark.textwidth <?php the_field('4th_h4_for_img6'); ?>
+                            p.padtwony.p2.p3.textwidth.sixthp <?php the_field('4th_p_for_img6'); ?>
+        div#block5
+            div.content
+                div.backgroundgradient2
+                p.headline.p1.block5headline <?php the_field('5_sect_p'); ?>
+                div.btndiv.btndivlesspad
+                    a(href!="<?php the_field('5sect_button_link'); ?>")
+                        button.btn-land.btn-b <?php the_field('5sect_button_text'); ?>
+        div#section6
+            input#immobilienubersicht.slider-radio(type="radio", name="slider-page", checked="checked")
+            input#kommunikation-mit-mietern.slider-radio(type="radio", name="slider-page")
+            input#dokumentenverwaltung.slider-radio(type="radio", name="slider-page")
+            input#dienstleistungen-buchen.slider-radio(type="radio", name="slider-page")
+            div#slider-links
+                label#immobilienubersicht.link(for="immobilienubersicht") Immobilienübersicht
+                label#kommunikation-mit-mietern.link(for="kommunikation-mit-mietern") Kommunikation mit Mietern
+                label#dokumentenverwaltung.link(for="dokumentenverwaltung") Dokumentenverwaltung
+                label#dienstleistungen-buchen.link(for="dienstleistungen-buchen") Dienstleistungen buchen
+            div#slider-arrows
+                div#backward
+                    label#immobilienubersicht(for="immobilienubersicht")
+                        img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/leftarrow.jpg")
+                    label#kommunikation-mit-mietern(for="kommunikation-mit-mietern")
+                        img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/leftarrow.jpg")
+                    label#dokumentenverwaltung(for="dokumentenverwaltung")
+                        img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/leftarrow.jpg")
+                    label#dienstleistungen-buchen(for="dienstleistungen-buchen")
+                        img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/leftarrow.jpg")
+                div#forward
+                    label#immobilienubersicht(for="immobilienubersicht")
+                        img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/rightarrow.jpg")
+                    label#kommunikation-mit-mietern(for="kommunikation-mit-mietern")
+                        img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/rightarrow.jpg")
+                    label#dokumentenverwaltung(for="dokumentenverwaltung")
+                        img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/rightarrow.jpg")
+                    label#dienstleistungen-buchen(for="dienstleistungen-buchen")
+                        img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/rightarrow.jpg")
+            div#slider-content
+                div#slider-header <?php the_field('6sect_h1'); ?>
+                div#slider-page
+                    div#immobilienubersicht
+                        h3 <?php the_field('6sect_slider_h3_1'); ?>
+                        p <?php the_field('6sect_slider_p1'); ?>
+                    div#kommunikation-mit-mietern
+                        h3 <?php the_field('6sect_slider_h3_2'); ?>
+                        p <?php the_field('6sect_slider_p2'); ?>
+                    div#dokumentenverwaltung
+                        h3 <?php the_field('6sect_slider_h3_3'); ?>
+                        p <?php the_field('6sect_slider_p3'); ?>
+                    div#dienstleistungen-buchen
+                        h3 <?php the_field('6sect_slider_h3_4'); ?>
+                        p <?php the_field('6sect_slider_p4'); ?>
+                div#slider-buttons
+                    label#immobilienubersicht(for="immobilienubersicht")
+                        .slider-button
+                    label#kommunikation-mit-mietern(for="kommunikation-mit-mietern")
+                        .slider-button
+                    label#dokumentenverwaltung(for="dokumentenverwaltung")
+                        .slider-button
+                    label#dienstleistungen-buchen(for="dienstleistungen-buchen")
+                        .slider-button
+            div#slider-image
+                div#tablet
+                    #image-placeholder
+                        img#immobilienubersicht(src!="<?php the_field('6sect_slide_1_img'); ?>")
+                        img#kommunikation-mit-mietern(src!="<?php the_field('6sect_slide_2_img'); ?>")
+                        img#dokumentenverwaltung(src!="<?php the_field('6sect_slide_3_img'); ?>")
+                        img#dienstleistungen-buchen(src!="<?php the_field('6sect_slide_4_img'); ?>")
+        div#section7
+            div#say <?php the_field('7sect_p1'); ?>
+            div#sign <?php the_field('7sect_p2'); ?>
+        div#section8
+            div#background
+                div#background-gradient
+                    div.wrapper
+                        div#line <?php the_field('8sect_p'); ?>
+                        label
+                            button
+                            a(href!="<?php the_field('8sect_button_link'); ?>")
+                                div.button <?php the_field('8sect_button_text'); ?>
+        include tmpl/_footer

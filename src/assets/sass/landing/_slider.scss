@@ -1,0 +1,187 @@
+@import "../partials/vars";
+
+input.slider-radio,
+#slider-arrows label
+{
+  display: none;
+}
+
+#slider-page>*
+{
+  position: absolute;
+  opacity: 0;
+  transition: none;
+}
+
+#image-placeholder
+{
+  overflow: hidden;
+  position: relative;
+}
+
+#slider-image img
+{
+  position: absolute;
+  @media (min-width: 768px) {
+    left: 100%;
+  }
+  top: 0;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+
+#slider-buttons .slider-button
+{
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 21px;
+  width: 11px;
+  height: 11px;
+  background-color: $dark;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+#slider-arrows>*
+{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  background-color: $dark;
+}
+
+#slider-links>*:hover
+{
+  cursor: pointer;
+}
+
+input#immobilienubersicht:checked~#slider-content>#slider-buttons>#immobilienubersicht .slider-button,
+input#kommunikation-mit-mietern:checked~#slider-content>#slider-buttons>#kommunikation-mit-mietern .slider-button,
+input#dokumentenverwaltung:checked~#slider-content>#slider-buttons>#dokumentenverwaltung .slider-button,
+input#dienstleistungen-buchen:checked~#slider-content>#slider-buttons>#dienstleistungen-buchen .slider-button
+{
+  background-color: $topaz;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+#slider-links>*:hover,
+input#immobilienubersicht:checked~#slider-links>#immobilienubersicht,
+input#kommunikation-mit-mietern:checked~#slider-links>#kommunikation-mit-mietern,
+input#dokumentenverwaltung:checked~#slider-links>#dokumentenverwaltung,
+input#dienstleistungen-buchen:checked~#slider-links>#dienstleistungen-buchen
+{
+  color: $topaz;
+}
+
+input#immobilienubersicht:checked~#slider-arrows>#forward>#kommunikation-mit-mietern,
+input#kommunikation-mit-mietern:checked~#slider-arrows>#forward>#dokumentenverwaltung,
+input#dokumentenverwaltung:checked~#slider-arrows>#forward>#dienstleistungen-buchen,
+input#dienstleistungen-buchen:checked~#slider-arrows>#forward>#immobilienubersicht,
+
+input#immobilienubersicht:checked~#slider-arrows>#backward>#dienstleistungen-buchen,
+input#kommunikation-mit-mietern:checked~#slider-arrows>#backward>#immobilienubersicht,
+input#dokumentenverwaltung:checked~#slider-arrows>#backward>#kommunikation-mit-mietern,
+input#dienstleistungen-buchen:checked~#slider-arrows>#backward>#dokumentenverwaltung
+{
+  display: block;
+}
+
+input#immobilienubersicht:checked~#slider-content>#slider-page>#immobilienubersicht,
+input#kommunikation-mit-mietern:checked~#slider-content>#slider-page>#kommunikation-mit-mietern,
+input#dokumentenverwaltung:checked~#slider-content>#slider-page>#dokumentenverwaltung,
+input#dienstleistungen-buchen:checked~#slider-content>#slider-page>#dienstleistungen-buchen
+{
+  position: static;
+  transition-property: opacity;
+  transition-timing-function: linear;
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px)
+{
+input#immobilienubersicht:checked~#slider-image #immobilienubersicht,
+input#kommunikation-mit-mietern:checked~#slider-image #kommunikation-mit-mietern,
+input#dokumentenverwaltung:checked~#slider-image #dokumentenverwaltung,
+input#dienstleistungen-buchen:checked~#slider-image #dienstleistungen-buchen
+{
+  transform: translate(-100%, 0);
+  transition-duration: 0.4s;
+  z-index: 3;
+}
+
+input#immobilienubersicht:checked~#slider-image #dienstleistungen-buchen,
+input#kommunikation-mit-mietern:checked~#slider-image #immobilienubersicht,
+input#dokumentenverwaltung:checked~#slider-image #kommunikation-mit-mietern,
+input#dienstleistungen-buchen:checked~#slider-image #dokumentenverwaltung
+{
+  transform: translate(-200%, 0);
+  transition-duration: 0.4s;
+  z-index: 1;
+}
+
+input#immobilienubersicht:checked~#slider-image #dokumentenverwaltung,
+input#kommunikation-mit-mietern:checked~#slider-image #dienstleistungen-buchen,
+input#dokumentenverwaltung:checked~#slider-image #immobilienubersicht,
+input#dienstleistungen-buchen:checked~#slider-image #kommunikation-mit-mietern
+{
+  transform: translate(100%, 0);
+  transition-duration: 0.4s;
+  z-index: 0;
+}
+
+input#immobilienubersicht:checked~#slider-image #kommunikation-mit-mietern,
+input#kommunikation-mit-mietern:checked~#slider-image #dokumentenverwaltung,
+input#dokumentenverwaltung:checked~#slider-image #dienstleistungen-buchen,
+input#dienstleistungen-buchen:checked~#slider-image #immobilienubersicht
+{
+  transform: translate(0, 0);
+  transition-duration: 0.4s;
+  z-index: 2;
+}
+}
+@media screen and (max-width: 767px) {
+  #slider-image.slider-b #immobilienubersicht {
+    left: 100%;
+    transform: translate(-100%, 0) !important;
+  }
+
+  input#immobilienubersicht:checked ~ #slider-image #immobilienubersicht,
+  input#kommunikation-mit-mietern:checked ~ #slider-image #kommunikation-mit-mietern,
+  input#dokumentenverwaltung:checked ~ #slider-image #dokumentenverwaltung,
+  input#dienstleistungen-buchen:checked ~ #slider-image #dienstleistungen-buchen {
+    transform: translate(0, 0);
+    transition-duration: 0.4s;
+    z-index: 3;
+  }
+
+  input#immobilienubersicht:checked ~ #slider-image #dienstleistungen-buchen,
+  input#kommunikation-mit-mietern:checked ~ #slider-image #immobilienubersicht,
+  input#dokumentenverwaltung:checked ~ #slider-image #kommunikation-mit-mietern,
+  input#dienstleistungen-buchen:checked ~ #slider-image #dokumentenverwaltung {
+    transform: translate(-100%, 0);
+    transition-duration: 0.4s;
+    z-index: 1;
+  }
+
+  input#immobilienubersicht:checked ~ #slider-image #dokumentenverwaltung,
+  input#kommunikation-mit-mietern:checked ~ #slider-image #dienstleistungen-buchen,
+  input#dokumentenverwaltung:checked ~ #slider-image #immobilienubersicht,
+  input#dienstleistungen-buchen:checked ~ #slider-image #kommunikation-mit-mietern {
+    transform: translate(200%, 0);
+    transition-duration: 0.4s;
+    z-index: 0;
+  }
+
+  input#immobilienubersicht:checked ~ #slider-image #kommunikation-mit-mietern,
+  input#kommunikation-mit-mietern:checked ~ #slider-image #dokumentenverwaltung,
+  input#dokumentenverwaltung:checked ~ #slider-image #dienstleistungen-buchen,
+  input#dienstleistungen-buchen:checked ~ #slider-image #immobilienubersicht {
+    transform: translate(100%, 0);
+    transition-duration: 0.4s;
+    z-index: 2;
+  }
+}

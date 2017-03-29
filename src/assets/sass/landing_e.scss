@@ -1,0 +1,406 @@
+body
+{
+  overflow-x: hidden;
+}
+
+@media (min-width: 481px) and (max-width: 600px)
+{
+  .custom1:nth-child(3) p
+  {
+    word-break: break-all;
+  }
+}
+
+#block1
+{
+  background-size: cover !important;
+  @media screen and (max-width: 767px)
+  {
+    background-position: 30% 50% !important;
+  }
+  @media screen and (min-width: 768px)
+  {
+    background-position: 0% 50% !important;
+  }
+  background-repeat: no-repeat !important;
+}
+
+#block3
+{
+  background-size: 1011.2px !important;
+  @media screen and (min-width: 481px) and (max-width: 1000px) {
+    background-position: 79% 122% !important;
+  }
+  @media screen and (min-width: 1001px)
+  {
+    background-position: right 122% !important;
+  }
+background-repeat: no-repeat;
+  .backgroundgradient
+  {
+    @media screen and (max-width: 480px)
+    {
+      background: linear-gradient(to bottom, rgba(19, 82, 114, 1), rgba(10, 50, 74, 0.77) 69%, #08293f)
+    }
+    @media screen and (min-width: 481px) and (max-width: 1000px)
+    {
+      background: linear-gradient(to bottom, rgba(8, 46, 76, 1) 37px, rgba(8, 46, 76, 0.9) 20%, rgba(8, 41, 63, 0.5) 100%), linear-gradient(to right, #08293f, rgba(8, 41, 63, 0) 100%) !important;
+    }
+    @media screen and (min-width: 1001px)
+    {
+      background: linear-gradient(to bottom, #082e4c 37px, rgba(8, 46, 76, 0.9) 20%, rgba(8, 41, 63, 0.5) 100%), linear-gradient(to left, rgba(8, 41, 63, 0), #08293f 900px) !important;
+    }
+  }
+}
+
+#block5
+{
+  background-size: 610px !important;
+  @media screen and (min-width: 468px)
+  {
+    background-position: -101px -75px !important;
+  }
+  @media screen and (max-width: 467px)
+  {
+    background-position: -153px -75px !important;
+  }
+}
+
+#section8 #background-gradient
+{
+  @media screen and (min-width: 768px)
+  {
+    background: linear-gradient(93deg, #08293f, rgba(23, 107, 158, 0.5) 12%, #244E69 400px, #092c43 600px, #08293f) !important;
+  }
+  @media screen and (max-width: 767px)
+  {
+    background: linear-gradient(93deg, rgba(8,41,63, 0.7), rgba(23, 107, 158, 0.5) 12%, #244E69 300px, #092c43 500px, #08293f) !important;
+  }
+}
+
+#block5 .backgroundgradient2
+{/*
+  @media screen and (min-width: 300px) and (max-width: 731px)
+  {
+    background: linear-gradient(93deg, #135272, rgba(23, 107, 158, 0.6) 18%, #092c43 92%, #08293f) !important;
+  }
+  @media screen and (min-width: 732px) and (max-width: 894px)
+  {
+    background: linear-gradient(93deg, rgba(19, 82, 114, 1), rgba(23, 107, 158, 0.75) 12%, #092c43 58%, #08293f) !important;
+  }
+  @media screen and (min-width: 895px) and (max-width: 1390px)
+  {
+    background: linear-gradient(93deg, #134872, rgba(23, 107, 158, 0.5) 5%, #244E69 27%, #092c43 58%, #08293f) !important;
+  }
+  @media screen and (min-width: 1390px)
+  {
+    background: linear-gradient(93deg, rgba(19, 72, 114, 1), rgba(23, 107, 158, 0.5) 12%, #244E69 25%, #092c43 58%, #08293f) !important;
+  }
+  @media screen and (min-width: 1645px)
+  {
+    background: linear-gradient(93deg, rgba(19, 72, 114, 1), rgba(23, 107, 158, 0.5) 7%, #244E69 22%, #092c43 58%, #08293f) !important;
+  }*/
+  @media screen and (min-width: 768px)
+  {
+    background: linear-gradient(93deg, rgba(8,41,63, 1), rgba(36,73,108, 1) 28px, rgba(23, 115, 158, 0.6) 150px, rgba(36,75,108, 1) 400px, #092c43 700px, #08293f) !important;
+  }
+  @media screen and (max-width: 767px)
+  {
+    background: linear-gradient(93deg, rgba(8,41,63, 1), rgba(36,73,108, 1) 28px, rgba(23, 115, 158, 0.6) 150px, rgba(36,75,108, 1) 400px, #092c43 700px, #08293f) !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  #block1 {
+    .cont.cont-b {
+      padding-top: 108px !important;
+      max-width: 920px !important;
+      h1#h1.mainheadline {
+        letter-spacing: 1.2px !important;
+        margin-bottom: 19px !important;
+      }
+      h3#h3.headline {
+        padding: 0 10px;
+        line-height: 37px !important;
+      }
+      p.headline {
+        padding-top: 11px !important;
+        margin-bottom: 12px !important;
+      }
+      .btndiv {
+        padding-bottom: 78px !important;
+      }
+    }
+  }
+
+  #block2 {
+    padding-top: 44px !important;
+    .content {
+      max-width: 1250px !important;
+      padding-bottom: 55px !important;
+      .lefttext {
+        margin-left: 5.8% !important;
+        width: 51% !important;
+        h2.headline2 {
+          margin-bottom: 17px !important;
+        }
+        .padtwony {
+          margin-top: 0 !important;
+          margin-bottom: 26px !important;
+          padding-top: 0 !important;
+          font-size: 18.3px !important;
+          letter-spacing: -0.1px !important;
+          line-height: 1.45
+        }
+        .padtwony#padp:nth-child(3) {
+          box-sizing: border-box !important;
+          padding-right: 14px !important;
+        }
+      }
+      .pict {
+        margin-top: 98px !important;
+        position: relative !important;
+        left: 21px !important;
+      }
+    }
+  }
+
+  #block3 {
+    .line
+    {
+      top: 38px !important;
+    }
+    height: auto !important;
+    padding-bottom: 62px !important;
+    .content {
+      max-width: 1094px !important;
+      h3.headline2 {
+        margin-top: 36px !important;
+        margin-bottom: 33px !important;
+      }
+      .stepsheadline {
+        margin: 13px 11px !important;
+      }
+      .circle {
+        line-height: 64px !important;
+        font-size: 22px !important;
+      }
+      .quater:first-child .circle {
+        right: 4px !important;
+      }
+      .quater:nth-child(2) .circle {
+        right: 2px !important;
+      }
+      .quater:nth-child(4) .circle {
+        right: -3px !important;
+      }
+      .steps {
+        margin-top: 33px !important;
+      }
+      .steps:nth-child(6) .stepsheadline.stepshead-b {
+        margin-left: -6px !important;
+        margin-right: 7px !important;
+        letter-spacing: 0.3px !important;
+      }
+      .steps:nth-child(7) .stepsheadline.stepshead-b {
+        margin-left: 12px !important;
+        margin-right: 21px !important;
+      }
+
+      .steps:nth-child(8) .stepsheadline.stepshead-b {
+        letter-spacing: 0.3px;
+        margin-left: 7px !important;
+        margin-right: 11px !important;
+      }
+      .steps:nth-child(9) .stepsheadline.stepshead-b {
+        margin: 13px 8px !important;
+        letter-spacing: 0.3px !important;
+      }
+    }
+  }
+
+  #block4 {
+    padding-top: 26px !important;
+    padding-bottom: 73px !important;
+    .content {
+      max-width: 1120px !important;
+      .contain {
+        padding-top: 20px !important;
+        #img1 {
+          margin-top: -6px !important;
+          margin-left: -8px !important;
+        }
+        #img2 {
+          margin-top: 0px !important;
+          margin-left: -32px !important;
+        }
+        #img3 {
+          margin-top: -25px !important;
+          margin-left: -1px !important;
+        }
+        .row {
+          padding-top: 34px !important;
+          .custom1 h4.stepsheadline {
+            max-width: none !important;
+            letter-spacing: 0.3px !important;
+            margin-right: 0px !important;
+            height: 2.34em !important;
+          }
+          .custom1:first-child h4.stepsheadline {
+            margin-left: 10px !important;
+          }
+          .custom1:nth-child(2) h4.stepsheadline {
+            margin-left: 5px !important;
+          }
+          .custom1:nth-child(3) h4.stepsheadline {
+            margin-left: 2px !important;
+          }
+          .custom1 p:nth-child(3) {
+            padding-top: 27px;
+          }
+          .custom1 p {
+            letter-spacing: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  #block5 {
+    .headline.p1.p1-b {
+      padding-top: 50px;
+    }
+    .block5headline {
+      line-height: 26px;
+      position: relative;
+      left: 0;
+      padding-top: 50px;
+      letter-spacing: 0.2px !important;
+      max-width: 620px;
+    }
+    .btn-land {
+      margin-top: 20px;
+      line-height: 1px;
+    }
+    .btndiv.btndivlesspad.pad-b {
+      padding-bottom: 68px;
+    }
+  }
+
+  div#section7.sect7 {
+    padding: 70px 0 80px 0;
+    #say {
+      max-width: 795px;
+      line-height: 33px;
+      position: relative;
+      left: 1px;
+      letter-spacing: 1.2px;
+    }
+    #sign {
+      margin-top: 42px;
+      font-size: 16rem;
+      left: -1px;
+    }
+  }
+/*
+  #section6 {
+    padding-bottom: 73px !important;
+    white-space: nowrap;
+    overflow: hidden !important;
+    #slider-header {
+      letter-spacing: 0.4px;
+    }
+    #slider-content {
+      white-space: normal;
+      width: 346px !important;
+      padding-top: 85px !important;
+    }
+    #slider-page {
+      margin-top: 19px !important;
+      .padtwelve {
+        letter-spacing: 0.2px !important;
+      }
+      p {
+        margin-top: -1px !important;
+      }
+    }
+    #slider-image {
+      @media screen and (min-width: 768px)
+      {
+        #tablet
+        {
+          margin-left: 26px !important;
+        }
+      }
+      float: none !important;
+      display: inline-block !important;
+      margin-left: -420px !important;
+      padding-left: 420px !important;
+      margin-top: 73px !important;
+      #image-placeholder, img {
+        width: 772px !important;
+        height: 552px !important;
+      }
+    }
+  }*/
+
+  #section8 {
+    .wrapper.wrapper-b {
+      padding-top: 91px !important;
+      padding-bottom: 69px !important;
+      #line.line-b {
+        letter-spacing: 0.1px !important;
+        position: relative !important;
+        left: 1px !important;
+      }
+      .button {
+        margin-top: 20px !important;
+        padding: 17px 81px 20px 81px !important;
+      }
+    }
+  }
+  #section8 #background .wrapper.wrapper-b .button.button-b:active
+  {
+    padding: 19px 79px 18px 83px !important;
+  }
+
+  div#section8 #background .wrapper button:active + .button {
+    padding: 19px 83px 18px 79px !important;
+  }
+}
+
+@media screen and (max-width: 767px)
+{
+  .lefttext
+  {
+    float: none !important;
+    width: auto !important;
+  }
+  .pict
+  {
+    display: block !important;
+    float: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 409.5px !important;
+    img
+    {
+      margin-left: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 410px)
+{
+  .pict
+  {
+    width: 310px !important;
+    height: auto !important;
+  }
+}
+
+#section7.sect7
+{
+  box-shadow: 0 -1px 1px 1px #08293f !important;
+}

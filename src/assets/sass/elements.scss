@@ -1,0 +1,81 @@
+$brownish-grey: #626262;
+$topaz: #1abc9c;
+
+.text
+{
+  font-family: "Lato Regular";
+  font-size: 15px;
+  color: $brownish-grey;
+}
+  .caption
+  {
+    @extend .text;
+
+    line-height: 1.6;
+    font-weight: bold;
+
+    display: inline-block;
+  }
+  .paragraph
+  {
+    @extend .text;
+
+    line-height: 1.4;
+
+    margin-top: 13px;
+  }
+    .tip
+    {
+      @extend .paragraph;
+
+      border: 2px solid $topaz;
+      border-radius: 7px;
+    }
+
+.control
+{
+  font-family: "Lato Regular";
+  input
+  {
+    display: none;
+  }
+}
+  .step
+  {
+    @extend .control;
+
+    .header
+    {
+      display: block;
+      padding: 20px 0;
+      border-bottom: 1px solid $topaz;
+
+      color: $brownish-grey;
+      font-size: 17px;
+      letter-spacing: 0.7px;
+    }
+    .header:after
+    {
+      content: url(../img/tools/step-header-close.png);
+      display: inline-block;
+      float: right;
+      margin-right: 5px;
+    }
+    .content
+    {
+      display: none;
+    }
+    input:checked~.header
+    {
+      color: $topaz;
+    }
+    input:checked~.header:after
+    {
+      content: url(../img/tools/step-header-open.png);
+      margin-right: 12px;
+    }
+    input:checked~.content
+    {
+      display: block;
+    }
+  }

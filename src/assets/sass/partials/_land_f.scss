@@ -1,0 +1,124 @@
+@import "vars";
+
+#block1 {
+  &.background-f {
+    height: 600px;
+    background-image: url(../img/landing1/block1_f.jpg);
+    background-size: cover;
+  }
+}
+
+.b3-gradient-f {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 4;
+  background-image: linear-gradient(to right, #08293f, #082a41 30%, rgba(10, 50, 74, 0.77) 47%, rgba(9, 68, 99, 0.56));
+  @media screen and (max-width: 480px){
+    background: linear-gradient(224deg, #08293f, rgba(10, 49, 73, 0.65) 101%, rgba(19, 82, 114, 0));
+  }
+}
+
+.cont-alarm {
+  max-width: 600px;
+  padding-top: 64px;
+  padding-bottom: 62px;
+  margin: 0 auto;
+  text-align: center;
+}
+.left {
+  float: left;
+}
+.alarm-img {
+  margin-right: 20px;
+}
+#block5 {
+  &.block5-f {
+    background-image: url(../img/landing1/block5.jpg);
+    position: relative;
+    padding-top: 0;
+    background-position: left 0%;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+}
+#row2 {
+  padding-top: 10px;
+}
+#row4 {
+  padding-top: 6px;
+}
+
+.img-pos {
+  margin-bottom: -60px;
+  &.key {
+    margin-bottom: -50px;
+  }
+}
+
+/*
+.s8-bg-gradient-sect8-f {
+  @media screen and (max-width: 1440px) and (min-width: 1281px), (min-width: 1441px) {
+    background: linear-gradient(93deg, rgba(19, 72, 114, 0), rgba(36, 78, 105, 0.1) 66%, rgb(36, 78, 105) 30%, #092c43 58%, #08293f);
+  }
+}*/
+
+@media (min-width: 1000px)
+{
+  .s8-bg-gradient-sect8-f
+  {
+    background: linear-gradient(to right, transparent 800px, #08293f 1200px);
+  }
+}
+
+@media screen and (max-width: 1152px){
+  .h3-f {
+    padding-left: 50px!important;
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .cont-alarm {
+    max-width: 410px;
+  }
+}
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .cont-alarm {
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 768px){
+  #block1 {
+    &.background-f {
+      height: auto;
+    }
+  }
+}
+@media screen and (max-width: 480px){
+  #block1 {
+    &.background-f {
+      background-position: 70%;
+    }
+  }
+  .left {
+    float: none;
+  }
+  .alarm-img {
+    margin-right: 0;
+  }
+  .h3-f {
+    padding-left: 0;
+  }
+  .cont-alarm {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+}

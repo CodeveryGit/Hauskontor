@@ -1,0 +1,89 @@
+footer#footer
+    div
+        a(href="/")
+            img#logo(src!="<?php the_field('footer_logo', 241); ?>")
+    div.wrapper
+        div.column#DasEigentumerportal
+            div.header <?php the_field('footer_column1_header', 241); ?>
+            div.body
+                a.section(href!="<?php the_field('home', 241); ?>") <?php the_field('home_label', 241); ?>
+                a.section(href!="<?php the_field('kontakt', 241); ?>") <?php the_field('kontakt_label', 241); ?>
+                a.section(href!="<?php the_field('impressum', 241); ?>") <?php the_field('impressum_label', 241); ?>
+                a.section(href!="<?php the_field('agb', 241); ?>") <?php the_field('agb_label', 241); ?>
+                span.section <?php the_field('copyright', 241); ?>
+        div.column#UnsereLeistungen
+            div.header <?php the_field('footer_column2_header', 241); ?>
+            div.body
+                a.section(href!="<?php the_field('mietvertrag', 241); ?>") <?php the_field('mietvertrag_label', 241); ?>
+                a.section(href!="<?php the_field('rauchmelder', 241); ?>") <?php the_field('rauchmelder_label', 241); ?>
+                a.section(href!="<?php the_field('hausmeister', 241); ?>") <?php the_field('hausmeister_label', 241); ?>
+                a.section(href!="<?php the_field('mieterhohung', 241); ?>") <?php the_field('mieterhohung_label', 241); ?>
+                a.section(href!="<?php the_field('ubergabeprotokoll', 241); ?>") <?php the_field('ubergabeprotokoll_label', 241); ?>
+        div.column#logos
+            a#bvfi(href="javascript:void(0);")
+                img(src!="<?php the_field('footer_bvfi', 241); ?>")
+            //a#sehrgut(href="javascript:void(0);")
+                img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/footer/sehrgut.png")
+            // Ausgezeichnet.org-Siegel: Anfang
+            div#auorg-bg.sehrgut
+                a.auorg-br(href="https://www.ausgezeichnet.org", target="_blank", title="Unabh&auml;ngige Bewertungen, Kundenbewertungen und G&uuml;tesiegel von Ausgezeichnet.org")
+                    span(style="font-size:8px;font-weight:normal;text-transform:uppercase;") Ausgezeichnet.org
+            script(type="text/javascript", src="//siegel.ausgezeichnet.org/widgets/js/57e917a90cf271618230d562/widget.js")
+            // Ausgezeichnet.org-Siegel: Ende
+            a#ssl(href="javascript:void(0);")
+                img(src!="<?php the_field('footer_ssl', 241); ?>")
+        div.column#NewsletterAbonnieren
+            div.header <?php the_field('footer_column4_header1', 241); ?>
+            div.body
+                script.
+                    function post(address, body) {
+                        var request = new XMLHttpRequest();
+                        request.open("POST", address, true);
+                        request.send(new FormData(body));
+                    }
+                    document.addEventListener("DOMContentLoaded", function () {
+                        var emailPopup = document.querySelector("#email-popup");
+                        var greyBackground = document.querySelector("#grey-background");
+                        function close()
+                        {
+                            greyBackground.style.display = "none";
+                            emailPopup.style.display = "none";
+                        }
+                        emailPopup.querySelector("button").addEventListener("click", close);
+                        emailPopup.querySelector(".close").addEventListener("click", close);
+                        document.querySelector("form#emailform").addEventListener("submit", function (event) {
+                            event.preventDefault();
+                            greyBackground.style.display = "block";
+                            emailPopup.style.display = "block";
+                            post("//zenhomes.us13.list-manage.com/subscribe/post?u=77aaf650334f282ce52194467&amp;id=83cce8b1da", this);
+                        });
+                    });
+                form(id="emailform")
+                    input#email(placeholder!="<?php the_field('footer_email_placeholder', 241); ?>", type="email", name="EMAIL" required)
+                    input(type="hidden", name="b_77aaf650334f282ce52194467_83cce8b1da", value="")
+                    label
+                        button(value="Subscribe", name="subscribe")
+                        div.button
+                            img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/footer/arrow.png")
+            div.header#folgen <?php the_field('footer_column4_header2', 241); ?>
+            div.body
+                div#social
+                    a(href!="<?php the_field('twitter_link', 241); ?>" target="_blank")
+                        img#twitter(src!="<?php echo get_template_directory_uri(); ?>/assets/img/twitter.png")
+                    a(href!="<?php the_field('facebook_link', 241); ?>" target="_blank")
+                        img#facebook(src!="<?php echo get_template_directory_uri(); ?>/assets/img/facebook.png")
+                    a(href!="<?php the_field('linkedin_link', 241); ?>" target="_blank")
+                        img#linkedIn(src!="<?php echo get_template_directory_uri(); ?>/assets/img/linkedIn.png")
+                    a(href!="<?php the_field('instagram_link', 241); ?>" target="_blank")
+                        img#instagram(src!="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png")
+#grey-background
+#email-popup.subscribe-popup
+    .subscribe-header
+        span.subscribe-caption <?php the_field('email-popup-header', 310); ?>
+        .close &#215;
+    .subscribe-message <?php the_field('email-popup-text', 310); ?>
+    label
+        button(value="Subscribe", name="subscribe")
+        div.button <?php the_field('email-popup-button', 310); ?>
+    .subscribe-bottom
+| <?php wp_footer(); ?>

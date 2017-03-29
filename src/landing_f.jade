@@ -1,0 +1,276 @@
+extends tmpl/_header
+block template
+    //
+        Template Name: Landing F
+
+block body
+    body
+        img(class="preload", src!="<?php the_field('1_section_bg'); ?>", style="display: none;")
+        div.head.clearfix.hide-notmobile.fixedhead
+            div.logo
+                a(href!="<?php the_field('header_logo_link', 456); ?>")
+                    img(src!="<?php the_field('header_logo', 456); ?>")
+            | <?php if (is_user_logged_in()): ?>
+            a(href!="<?php the_field('loggined_button_link', 456); ?>")
+                button.return.signup.login <?php the_field('loggined_button_text', 456); ?>
+            | <?php else: ?>
+            a(href!="<?php the_field('mobile_button_link', 456); ?>")
+                button.signup.login.Einloggen <?php the_field('mobile_button_text', 456); ?>
+            | <?php endif; ?>
+            div.phone.fixedphone
+                a(href!="<?php the_field('phone_link', 456); ?>")
+                    img(src!="<?php the_field('phone_icon', 456); ?>")
+                    div#shadow
+        div(style!="background-image: url(<?php the_field('1_section_bg'); ?>)")#block1.background-f
+            div.head.clearfix.hide-onmobile
+                div.logo
+                    a(href!="<?php the_field('header_logo_link', 456); ?>")
+                        img(src!="<?php the_field('header_logo', 456); ?>")
+                | <?php if (is_user_logged_in()): ?>
+                a(href!="<?php the_field('loggined_button_link', 456); ?>")
+                    button.return.signup.login <?php the_field('loggined_button_text', 456); ?>
+                | <?php else: ?>
+                a(href!="<?php the_field('second_button_link', 456); ?>")
+                    button.signup.login <?php the_field('second_button_text', 456); ?>
+                a(href!="<?php the_field('first_button_link', 456); ?>")
+                    button.signup.whitehov <?php the_field('first_button_text', 456); ?>
+                | <?php endif; ?>
+                div.info
+                    p.infotext <?php the_field('phone_number', 456); ?>
+            div.cont.cont-d.cont-f
+                h1.mainheadline.main-f <?php the_field('1_section_headline'); ?>
+                h3.headline#h3 <?php the_field('1_section_h3'); ?>
+                p.headline.p1.p-f.hide-onmobile <?php the_field('1_section_p'); ?>
+                div.btndiv
+                    a(href!="<?php the_field('1_section_button_link'); ?>")
+                        button.btn-land <?php the_field('1_section_button_text'); ?>
+        div#block2.block2-b
+            div.content.clearfix.padbot.padbot-b
+                div.lefttext.lefttext-d
+                    h2.headline2.nomarg.marg-b <?php the_field('2_section_headline'); ?>
+                    p.padtwony.p2.nopad.b2-font_d <?php the_field('2_section_p1'); ?>
+                    p.padtwony.p2.nopad.b2-font_d <?php the_field('2_section_p2'); ?>
+                div.pict.pict-d
+                    img(src!="<?php the_field('2_section_image'); ?>").building.img-b
+        div(style!="background-image: url(<?php the_field('3_section_bg'); ?>)")#block3.landing_f
+            div.content.clearfix
+                div.b3-gradient-f
+                h3.headline2.h2white <?php the_field('3_section_headline'); ?>
+                div.block.blockpad-b.hide-onmobile
+                    div.quater
+                        div.circle 1
+                    div.quater
+                        div.circle 2
+                    div.quater
+                        div.circle 3
+                    div.quater
+                        div.circle 4
+                    div.line
+                    div.steps
+                        h3.stepsheadline.stepshead-b <?php the_field('3_section_step1'); ?>
+                    div.steps
+                        h3.stepsheadline.stepshead-b <?php the_field('3_section_step2'); ?>
+                    div.steps
+                        h3.stepsheadline.stepshead-b <?php the_field('3_section_step3'); ?>
+                    div.steps
+                        h3.stepsheadline.stepshead-b <?php the_field('3_section_step4'); ?>
+                div.block.hide-notmobile
+                    div.steps
+                        div.quater
+                            div.circle.circle-b 1
+                        div.quater
+                            div.circle.circle-b 2
+                        div.quater
+                            div.circle.circle-b 3
+                        div.quater
+                            div.circle.circle-b 4
+                    div.vertline.vertline-b
+                    div.stepstext.stepstext-b
+                        div.quater
+                            h3.stepsheadline.quat.quat-b <?php the_field('3_section_step1'); ?>
+                        div.quater
+                            h3.stepsheadline.quat.quat-b <?php the_field('3_section_step2'); ?>
+                        div.quater
+                            h3.stepsheadline.quat.quat-b <?php the_field('3_section_step3'); ?>
+                        div.quater
+                            h3.stepsheadline.quat.quat-b <?php the_field('3_section_step4'); ?>
+        div#block4.block4-f
+            div.content
+                h3.headline2.letspace <?php the_field('4_section_headline'); ?>
+                div.contain.contain-b.hide-onmobile
+                    div.row.imgmax
+                        div.custom1
+                            img(src!="<?php the_field('4_section_image_1'); ?>")
+                        div.custom1
+                            img(src!="<?php the_field('4_section_image_2'); ?>")
+                        div.custom1
+                            img(src!="<?php the_field('4_section_image_3'); ?>")
+                    div.row.imgmax.padthirty.padthirty-b
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.firsth4.firsth4-b.customlineheight.b4-h4-d <?php the_field('4_section_head_1'); ?>
+                            p.padtwony.p2.p3.notbold.textwidth.textwidth-b#1stp.customlineheight.p-line <?php the_field('4_section_text_1_p_1'); ?>
+                            p.padtwony.p2.p3.notbold.textwidth.textwidth-b.customlineheight.p-line.secondabWerden <?php the_field('4_section_text_1_p_2'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.customlineheight.b4-h4-d <?php the_field('4_section_head_2'); ?>
+                            p.padtwony.p2.p3.textwidth.textwidth-b.customlineheight.p-line <?php the_field('4_section_text_2_p_1'); ?>
+                            p.padtwony.p2.p3.textwidth.textwidth-b.customlineheight.p-line.secondab <?php the_field('4_section_text_2_p_2'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.customlineheight.b4-h4-d <?php the_field('4_section_head_3'); ?>
+                            p.padtwony.p2.p3.textwidth.textwidth-b.customlineheight.p-line <?php the_field('4_section_text_3_p_1'); ?>
+                            p.padtwony.p2.p3.textwidth.textwidth-b.customlineheight.p-line.secondab <?php the_field('4_section_text_3_p_2'); ?>
+                div.contain.hide-notmobile
+                    div.custom1
+                        img(src!="<?php the_field('4_section_image_1'); ?>").img1
+                        h4.stepsheadline.dark.textwidth <?php the_field('4_section_head_1'); ?>
+                        p.padtwony.p2.p3.notbold.textwidth.firstmobp <?php the_field('4_section_text_1_p_1'); ?>
+                        p.padtwony.p2.p3.notbold.textwidth.firstmobp.secondab <?php the_field('4_section_text_1_p_2'); ?>
+                    div.custom1
+                        img(src!="<?php the_field('4_section_image_2'); ?>").img3
+                        h4.stepsheadline.dark.textwidth <?php the_field('4_section_head_2'); ?>
+                        p.padtwony.p2.p3.textwidth.third-mobile-p <?php the_field('4_section_text_2_p_1'); ?>
+                        p.padtwony.p2.p3.textwidth.third-mobile-p.secondab <?php the_field('4_section_text_2_p_2'); ?>
+                    div.custom1
+                        img(src!="<?php the_field('4_section_image_3'); ?>").img5
+                        h4.stepsheadline.dark.textwidth <?php the_field('4_section_head_3'); ?>
+                        p.padtwony.p2.p3.textwidth <?php the_field('4_section_text_3_p_1'); ?>
+                        p.padtwony.p2.p3.textwidth.secondab <?php the_field('4_section_text_3_p_2'); ?>
+        div(style!="background-image: url(<?php the_field('5_section_bg'); ?>)")#block5.block5-f
+            div.content
+                div.s8-bg-gradient-sect5.bg-position
+                p.headline.p1.p1-b.p1-f.block5headline <?php the_field('5_section_text'); ?>
+                div.btndiv.btndivlesspad.pad-f
+                    a(href="http://nav.wordpress.codevery.com/contacts")
+                         button.btn-land.btn-b.btn-b-b <?php the_field('5_section_button_text'); ?>
+        div#block44
+            div.content
+                h3.headline2.h3-f <?php the_field('6_section_headline'); ?>
+                div.contain.hide-onmobile
+                    div.row.imgmax
+                        div.custom1
+                            img(src!="<?php the_field('6_section_image_1'); ?>")
+                        div.custom1
+                            img(src!="<?php the_field('6_section_image_2'); ?>").img-pos.key
+                        div.custom1
+                            img(src!="<?php the_field('6_section_image_3'); ?>").img-pos
+                    div.row.imgmax.padthirty#row2
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.firsth4 <?php the_field('6_section_head_1'); ?>
+                            p.padtwony.p2.p3.notbold.textwidth#1stp <?php the_field('6_section_text_1'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.second-h4 <?php the_field('6_section_head_2'); ?>
+                            p.padtwony.p2.p3.textwidth.padtopten <?php the_field('6_section_text_2'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth <?php the_field('6_section_head_3'); ?>
+                            p.padtwony.p2.p3.textwidth.thirdp.padtopten <?php the_field('6_section_text_3'); ?>
+                    div.row.imgmax.padfifty
+                        div.custom1
+                            img(src!="<?php the_field('6_section_image_4'); ?>")#img4
+                        div.custom1
+                            img(src!="<?php the_field('6_section_image_5'); ?>")#img5
+                        div.custom1
+                            img(src!="<?php the_field('6_section_image_6'); ?>")#img6
+                    div.row.imgmax.padthirty#row4
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.firsth4 <?php the_field('6_section_head_4'); ?>
+                            p.padtwony.p2.p3.textwidth.padtopten <?php the_field('6_section_text_4'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.second-h4 <?php the_field('6_section_head_5'); ?>
+                            p.padtwony.p2.p3.textwidth.padtopten.second-h4 <?php the_field('6_section_text_5'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth#last-h4 <?php the_field('6_section_head_6'); ?>
+                            p.padtwony.p2.p3.textwidth.thirdp.padtopten.last-p <?php the_field('6_section_text_6'); ?>
+                    div.cont-alarm
+                        div.clearfix
+                            img(src!="<?php the_field('6_section_image_7'); ?>").alarm-img.left
+                            h4.stepsheadline.dark.left <?php the_field('6_section_head_7'); ?>
+                div.contain.hide-notmobile
+                    div.custom1
+                        img(src!="<?php the_field('6_section_image_1'); ?>").img1
+                        h4.stepsheadline.dark.textwidth <?php the_field('6_section_head_1'); ?>
+                        p.padtwony.p2.p3.notbold.textwidth.firstmobp <?php the_field('6_section_text_1'); ?>
+                    div.custom1
+                        img(src!="<?php the_field('6_section_image_2'); ?>").img2
+                        h4.stepsheadline.dark.textwidth.second-mobile-h4 <?php the_field('6_section_head_2'); ?>
+                        p.padtwony.p2.p3.textwidth.second-mobile-p <?php the_field('6_section_text_2'); ?>
+                    div.custom1
+                        img(src!="<?php the_field('6_section_image_3'); ?>").img3
+                        h4.stepsheadline.dark.textwidth <?php the_field('6_section_head_3'); ?>
+                        p.padtwony.p2.p3.textwidth.third-mobile-p <?php the_field('6_section_text_3'); ?>
+                    div.custom1
+                        img(src!="<?php the_field('6_section_image_4'); ?>").img4
+                        h4.stepsheadline.dark.textwidth <?php the_field('6_section_head_4'); ?>
+                        p.padtwony.p2.p3.textwidth.fourthp <?php the_field('6_section_text_4'); ?>
+                    div.custom1
+                        img(src!="<?php the_field('6_section_image_5'); ?>").img5
+                        h4.stepsheadline.dark.textwidth <?php the_field('6_section_head_5'); ?>
+                        p.padtwony.p2.p3.textwidth <?php the_field('6_section_text_5'); ?>
+                    div.custom1
+                        img(src!="<?php the_field('6_section_image_6'); ?>").img6
+                        h4.stepsheadline.dark.textwidth <?php the_field('6_section_head_6'); ?>
+                        p.padtwony.p2.p3.textwidth.sixthp <?php the_field('6_section_text_6'); ?>
+                    div.cont-alarm
+                        div.clearfix
+                            img(src!="<?php the_field('6_section_image_7'); ?>").alarm-img.left
+                            h4.stepsheadline.dark.left <?php the_field('6_section_head_7'); ?>
+        div#section7.sect7
+            div#say <?php the_field('7_section_text'); ?>
+            div#sign <?php the_field('7_section_sign'); ?>
+        div#section6.sect6
+            div#slider-b.b
+            input#immobilienubersicht.slider-radio(type="radio", name="slider-page", checked="checked")
+            input#kommunikation-mit-mietern.slider-radio(type="radio", name="slider-page")
+            input#dokumentenverwaltung.slider-radio(type="radio", name="slider-page")
+            input#dienstleistungen-buchen.slider-radio(type="radio", name="slider-page")
+            //div#slider-links
+            //    label#immobilienubersicht.link(for="immobilienubersicht") Immobilienübersicht
+            //    label#kommunikation-mit-mietern.link(for="kommunikation-mit-mietern") Kommunikation mit Mietern
+            //    label#dokumentenverwaltung.link(for="dokumentenverwaltung") Dokumentenverwaltung
+            //    label#dienstleistungen-buchen.link(for="dienstleistungen-buchen") Dienstleistungen buchen
+            //div#slider-arrows
+            //    div#backward
+            //        label#immobilienubersicht(for="immobilienubersicht") &#x276E;
+            //        label#kommunikation-mit-mietern(for="kommunikation-mit-mietern") &#x276E;
+            //        label#dokumentenverwaltung(for="dokumentenverwaltung") &#x276E;
+            //        label#dienstleistungen-buchen(for="dienstleistungen-buchen") &#x276E;
+            //    div#forward
+            //        label#immobilienubersicht(for="immobilienubersicht") &#x276F;
+            //        label#kommunikation-mit-mietern(for="kommunikation-mit-mietern") &#x276F;
+            //        label#dokumentenverwaltung(for="dokumentenverwaltung") &#x276F;
+            //        label#dienstleistungen-buchen(for="dienstleistungen-buchen") &#x276F;
+            div#slider-content.slider-cont-b
+                div#slider-header.header-b <?php the_field('8_section_headline'); ?>
+                div#slider-page.page-b.pageheight-b
+                    div#immobilienubersicht
+                        p.padtwelve.
+                            <?php the_field('8_section_p_1'); ?>
+                        p.padtwelve.
+                            <?php the_field('8_section_p_2'); ?>
+                        p.padtwelve.
+                            <?php the_field('8_section_p_3'); ?>
+                        p.padtwelve.bold.
+                            <?php the_field('8_section_p_4'); ?>
+                    div#kommunikation-mit-mietern
+                    div#dokumentenverwaltung
+                    div#dienstleistungen-buchen
+                //div#slider-buttons
+                    //label#immobilienubersicht(for="immobilienubersicht")
+                    //label#kommunikation-mit-mietern(for="kommunikation-mit-mietern")
+                    //label#dokumentenverwaltung(for="dokumentenverwaltung")
+                    //label#dienstleistungen-buchen(for="dienstleistungen-buchen")
+            div#slider-image.slider-b
+                #tablet
+                    #image-placeholder
+                        img#immobilienubersicht(src!="<?php the_field('8_section_slide_image'); ?>")
+                        img#kommunikation-mit-mietern
+                        img#dokumentenverwaltung
+                        img#dienstleistungen-buchen
+        div(style!="background-image: url(<?php the_field('9_section_bg'); ?>)")#section8.sect8
+            div#background.block8-bg-f
+                div.s8-bg-gradient-sect8-f
+                    div.wrapper.wrapper-b
+                        div#line.line-b <?php the_field('9_section_text'); ?>
+                        label
+                            button
+                            a(href!="<?php the_field('9_section_button_link'); ?>")
+                                div.button.button-b <?php the_field('9_section_button_text'); ?>
+        include tmpl/_footer

@@ -1,0 +1,300 @@
+#block1.background-b
+{
+  background-image: url(../img/contacts/header.jpg);
+  height: auto;
+  background-size: cover;
+  @media screen and (min-width: 1440px) {
+    height: 596px;
+  }
+  @media screen and (max-width: 768px)
+{
+    background-position: 30%;
+  }
+  background-repeat: no-repeat;
+}
+/*
+.head {
+  padding-top: 48px;
+}*/
+
+.cont.cont-b
+{
+  margin: 0 186px;
+  max-width: none;
+}
+
+h1.mainheadline
+{
+  margin-top: 75px;
+}
+
+h3.headline#h3
+{
+  font-family: "Lato Light";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 1px;
+  margin-top: 27px;
+  margin-left: 3px;
+  padding: 0 38px;
+}
+
+#block1
+{
+  padding-bottom: 90px;
+}
+
+#sect2-wrapper
+{
+  padding: 67px 93.5px 56px 99px;
+}
+
+.mailIcon
+{
+  margin-left: 8px;
+  width: 44.8px;
+}
+
+.phoneIcon
+{
+  width: 28.3px;
+}
+
+.columnn
+{
+  vertical-align: top;
+  display: inline-block;
+}
+
+.columnn:nth-child(2)
+{
+  margin-top: -3px;
+  float: right;
+  img
+  {
+    height: 55px;
+    margin-left: 20px;
+    width: 30px;
+  }
+  .header
+  {
+    margin-top: 18px;
+  }
+}
+
+.columnn .header
+{
+  padding-right: 10px;
+  margin-top: 22px;
+  margin-bottom: 14px;
+  font-family: 'Lato Medium';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 1px;
+  color: #08293f;
+}
+
+.caption
+{
+  margin-top: 10px;
+  margin-left: 6px;
+  margin-bottom: 6px;
+  font-family: 'Lato Medium';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  color: #08293f;
+}
+
+.input
+{
+  padding: 8px 12px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: solid 1px #cccccc;
+  font-family: "Lato Light Italic";
+  font-size: 15px;
+  font-weight: 300;
+  color: #a9a9a9;
+}
+
+textarea.input
+{
+  resize: none;
+  height: 182px;
+}
+
+.half
+{
+  box-sizing: border-box;
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.phoneNum
+{
+  font-family: 'Lato Light';
+  font-size: 35px;
+  letter-spacing: 0.7px;
+  color: #1abc9c;
+  margin-top: 18px;
+}
+
+.button
+{
+  text-align: right;
+  margin-top: 21px;
+  input
+  {
+    display: none;
+  }
+  label
+  {
+    cursor: pointer;
+    padding: 11px 20px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #1abc9c;
+    box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.5);
+    font-family: "Lato Bold";
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+  label:hover
+  {
+    background-color: #148e77;
+  }
+  input:active+label
+  {
+    background-color: #148e77;
+    box-shadow: -1px -2px 0 0 rgba(0, 0, 0, 0.5);
+    padding: 9px 21px 13px 19px;
+  }
+}
+
+.phonecap
+{
+  margin-top: 9px;
+}
+
+.mailcap
+{
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px)
+{
+  .columnn:first-child
+  {
+    width: 55vw;
+  }
+  .columnn:nth-child(2) {
+    width: 25vw;
+  }
+  @media screen and (max-width: 1100px)
+  {
+    #sect2-wrapper
+    {
+      padding: 67px 60px 56px 60px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 958px) {
+  #block1.background-b {
+    height: auto !important;
+  }
+}
+@media screen and (max-width: 1100px)
+{
+  .cont.cont-b {
+    margin-left: 100px !important;
+    margin-right: 100px !important;
+  }
+}
+
+@media screen and (max-width: 767px)
+{
+
+  .columnn:nth-child(2) {
+    float: none;
+    display: block;
+  }
+  .cont.cont-b
+  {
+    margin-left: 60px !important;
+    margin-right: 60px !important;
+  }
+
+  .half
+  {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .cont.cont-b {
+    h3#h3 {
+      padding: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 475px)
+{
+  #sect2-wrapper
+  {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .cont.cont-b
+  {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+}
+
+@media screen and (min-width: 1281px)
+{
+  .columnn
+  {
+    text-align: left;
+  }
+  .columnn#Oder
+  {
+    float: none;
+    margin-left: 40px;
+  }
+  #section2
+  {
+    text-align: center;
+  }
+  #sect2-wrapper
+  {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px)
+{
+  .half.right
+  {
+    padding-left: 9px;
+  }
+  .half.left
+  {
+    padding-right: 9px;
+  }
+}

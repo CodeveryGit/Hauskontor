@@ -1,0 +1,236 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet", href="../assets/css/main.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i")
+    body
+        .container-fluid
+            .row.headerr
+                .step Parteien
+                .step Vertragsgegenstand
+                .step Mietkonditionen
+                .step Rechte & Pflichten
+                .step Fertigstellen
+            .row
+                .col-sm-12.col-md-12.col-lg-12
+                    label.step-header MIETDAUER
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .header Bitte geben Sie das Datum des Mietbeginns an. Möchten Sie das Mietverhältnis zeitlich befristen? Falls ja, aus welchem Grund soll die Befristung erfolgen?
+                    .paragraph
+                        | Es gibt vier gesetzliche Befristungsgründe, aufgrund derer eine Befristung des Mietverhältnisses möglich ist. Nur wenn einer dieser vier Gründe greift,
+                        | ist die Befristung zulässig. Der Grund muss zudem im Mietvertrag konkret bezeichnet werden.
+                    .paragraph
+                        | Durch den Ausschluss der Kündigungsmöglichkeit binden sich Vermieter und Mieter für eine gewisse Zeit fest an den Vertrag. Dies ist für maximal vier
+                        | Jahre möglich. Die Laufzeit des Kündigungsausschlusses berechnet sich nicht nach dem vereinbarten Mietbeginn, sondern nach dem Zeitpunkt des
+                        | Vertragsschlusses, also dem Datum der letzten Unterschrift.
+                    .tip
+                        .paragraph
+                            | Durch die Befristung endet der Mietvertrag zum vereinbarten Zeitpunkt, ohne dass eine Kündigung ausgesprochen werden muss. Es muss also keine Frist
+                            | beachtet werden, was oft zu Problemen beim Auszug führen kann.
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Mietbeginn*
+                    input(type="date").native
+                    .header Mietende*
+                    input(type="date").native
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Mietdauer*
+                    select.native
+                        option Unbefristet
+                    .header Umstand/Begründung*
+                    input(type="text").native
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .paragraph
+                        | Durch den Ausschluss der Kündigungsmöglichkeit binden sich Vermieter und Mieter für eine gewisse Zeit fest an den Vertrag. Dies ist für maximal vier Jahre
+                        | möglich. Die Laufzeit des Kündigungsausschlusses berechnet sich nicht nach dem vereinbarten Mietbeginn, sondern nach dem Zeitpunkt des Vertragsschlusses,
+                        | also dem Datum der letzten Unterschrift.
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .check
+                        .header Kündigungsverzicht
+                        .checkbox
+                            input(type="checkbox", id="kundigungsverzicht")
+                            label(for="kundigungsverzicht")
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Dauer des Kündigungsverzichts in Monaten*
+                    select.native
+                        option 00 Monate
+            .row
+                .col-sm-2.col-sm-offset-10.col-md-2.col-md-offset-10.col-lg-2.col-lg-ofset10
+                    .button
+                        input(type="button", id="step1_button")
+                        label(for="step1_button") Weiter
+            .row
+                .col-sm-12.col-md-12.col-lg-12
+                    label.step-header Miete
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .header Geben Sie hier die Höhe der Miete und die Zahlungsmodalitäten an.
+                    .paragraph
+                        | Um die Grundmiete festzulegen hilft Ihnen der örtliche Mietspiegel oder Haus-, Wohnungs- und Grundeigentümervereine. In der Grundmiete sind
+                        | keine Betriebskosten, auch Nebenkosten genannt, enthalten.
+                    .tip
+                        | Die Mietpreisbremse gilt seit dem 1. Juni 2016 in Berlin. Die Miete darf hier die ortsübliche Vergleichsmiete höchstens um 10% übersteigen.
+                        | Die Mietpreisbremse gilt seit September 2015 auch in weiteren Bundesländern. Gilt die Mietpreisbremse in Ihrem Bundesland nicht, sind Sie grundsätzlich
+                        | in der Miethöhe und etwaiger vertraglicher Steigerungen frei.
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Monatliche Kaltmiete*
+                    input(type="text").native
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Tag der Zahlungsfirst (z.B. für den 3. des Monats: 3 eingeben)*
+                    .input(type="date").native
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .paragraph Welche Nebenkosten sind noch zu tragen?<br />Wollen Sie alle 17 in der Betriebskostenverordnung aufgeführten, umlagefähigen Betriebskosten oder eine eigene Aufstellung angeben?
+                    .paragraph Sind die Betriebskosten in einer Pauschale oder als Vorauszahlungen zu leisten? Bei einer Pauschale sind Heizkosten und Warmwasserkosten extra nach Verbrauch abrechnen.
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Monatliche Betriebskostenhöhe*
+                    input(type="text").native
+                    .header Berechnung Betriebskosten
+                    select.native
+                        option Lorem Ipsum set dolor
+                    .header Kontoinhaber*
+                    input(type="text").native
+                    .header IBAN*
+                    input(type="text").native
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Betriebskostenzahlung
+                    select.native
+                        option Lorem Ipsum set dolor
+                    .header Betriebskostenaufstellung
+                    input(type="text").native
+                    .header Name der Bank
+                    input(type="text").native
+                    .header BIC
+                    input(type="text").native
+            .row
+                .col-sm-12.col-md-12.col-lg-12
+                    label.step-header KAUTION
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .header In welcher Höhe möchten Sie die Kaution festlegen?
+                    .paragraph
+                        | Barkaution oder Überweisung: Der Mieter darf die Kaution in 3 gleichen monatlichen Teilzahlungen, die erste bei Beginn des Mietverhältnisses, erbringen. Der Vermieter hat diese Summe
+                        | dann bei einem Kreditinstitut zu einem für Sparanlagen mit dreimonatiger Kündigungsfrist üblichen Zinssatz getrennt von seinem Vermögen anzulegen. Die erwirtschafteten Zinsen stehen
+                        | dem Mieter zu, was aber lediglich heißt, dass diese bei der Verrechnung mit Ansprüchen des Vermieters zu berücksichtigen sind. Hat der Vermieter das Geld nicht ordnungsgemäß angelegt,
+                        | hat er die üblichen Zinsen trotz allem bei der Abrechnung zu berücksichtigen.
+                    br
+                    br
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .header 123
+                    input(type="text")
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .paragraph Bankbürgschaften: In einer Bankbürgschaft verpflichtet sich die Bank, auf erstes Anfordern des Vermieters den vereinbarten Kautionsbetrag für den Mieter zu zahlen.
+                    .paragraph
+                        | Verpfändete Sparkonten: Der Mieter richtet selbst ein entsprechendes Sparkonto ein und verpfändet dieses für die Mietzeit an der Vermieter. Dieser kann dann ebenso
+                        | wie bei einer Bankbürgschaft auf erstes Anfordern auf das Geld zugreifen.
+                br
+                br
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Art Mietkaution
+                    select.native
+                        option Lorem Ipsum set dolor
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Sonstige Mietkaution
+                    input(type="text").native
+            .row
+                .col-sm-12.col-md-12.col-lg-12
+                    label.step-header MIETERHÖHUNG
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .header Welche Regelungen zur Mieterhöhung möchten Sie anwenden?
+                    .paragraph
+                        | Es gibt nur bestimmte Möglichkeiten die Miete während eines laufenden Mietverhältnisses zu anzupassen:  
+                        | 1. Staffelmiete: Vorab festgelegte Erhöhung der Miete. Der Mietpreis muss dabei mindestens 1 Jahr gleich bleiben.
+                        | 2. Indexmiete: Kopplung an den Verbraucherpreisindex für Deutschland (VPI).
+                        | 3. Die einseitige Vermietererklärung über die Erhöhung der Miete auf die ortsübliche Vergleichsmiete. Hierbei handelt es sich um ein gesetzliches Mieterhöhungsrecht, das nicht vertragliche geregelt werden muss.  
+                        | Eine einvernehmliche Vereinbarung mit dem Mieter über die Änderung ist natürlich ebenfalls jederzeit möglich.
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Mieterhöhung
+                    select.native
+                        option Lorem Ipsum set dolor
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .paragraph Bitte schreiben Sie hier die Staffelliste auf. Diese wird komplett in den Mietvertrag übernommen.
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Staffelliste
+                    textarea.native
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .tipp Vorsicht bei Mietpreisüberhöhung! Beachten Sie die sogenannte “Wesentlichkeitsgrenze“ von 20% über der ortsüblichen Vergleichsmiete. Diese bezieht sich beispielsweise auf einen einschlägigen Mietpreisspiegel.
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .check
+                        .header Kündigungsverzicht
+                        input(type="radio").radio
+                        input(type="radio").radio
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Dauer Kündigungsverzicht
+                    input(type="text")
+        .container-fluid
+            .row.headerr
+                .step Parteien
+                .step Vertragsgegenstand
+                .step Mietkonditionen
+                .step Rechte & Pflichten
+                .step Fertigstellen
+            .row
+                .col-sm-12.col-md-12.col-lg-12
+                    label.step-header VERTRAGSPARTNER
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .header Bitte geben Sie hier die Daten des Vertragsgegenstandes an.
+                    .paragraph Es ist wichtig, dass ein Außenstehender alleine anhand des Mietvertrags genau bestimmen kann, welches Mietobjekt gemeint ist. Geben Sie deshalb bitte auch unbedingt die zweite Adresszeile an.
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Art der Mietsache*
+                select.native
+                    option Lorem Ipsum set dolor
+            .row
+                .col-sm-6.col-md-6.col-lg-6
+                    .container-fluid
+                        .row
+                            .col-sm-10.col-md-10.col-lg-10
+                                .header Straße*
+                                input(type="text")
+                            .col-sm-2.col-md-2.col-lg-2
+                                .header Haus-Nr.*
+                                input(type="text")
+                .col-sm-6.col-md-6.col-lg-6
+                    .header Adresszusatz
+                    input(type="text")
+            .row
+                .col-sm-9.col-md-9.col-lg-9
+                    .header Bitte tragen Sie hier die gemeinsam genutzten Einrichtungen an.
+                    .paragraph
+                        | Geben Sie die Gemeinschaftsflächen oder die gemeinschaftlich genutzten Einrichtungen an, die der Mieter zusammen mit
+                        | Dritten nutzt. Bestehen keine gemeinsamen Fläche oder gemeinschaftlich genutzten Einrichtungen, ist keine Auswahl notwendig.
+            .row
+                .col-sm-4.col-md-4.col-lg-4
+                    .check
+                        .header Privatstraße
+                        .checkbox
+                            label(for="111")
+                            input(type="checkbox", id="111")
+                .col-sm-4.col-md-4.col-lg-4
+                    .check
+                        .header Privatstraße
+                        .checkbox
+                            label(for="222")
+                            input(type="checkbox", id="111")
+                .col-sm-4.col-md-4.col-lg-4
+                    .check
+                        .header Privatstraße
+                        .checkbox
+                            label(for="333")
+                            input(type="checkbox", id="111")

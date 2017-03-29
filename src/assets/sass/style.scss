@@ -1,0 +1,160 @@
+@import "partials/vars";
+@import "partials/partstyle";
+@import "partials/landing";
+@import "landing/slider";
+@import "landing/_desktop";
+@import "landing/_mobile";
+
+
+body {
+  background-color: #f2f2f2 !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+.mainblock {
+  margin-top: 15px;
+  background-color: $white;
+  border-radius: 7px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.21);
+
+  #lst {
+    .perc {
+      //      -webkit-transform: rotate(90deg);
+      //      transform: rotate(90deg);
+      width: 42px;
+      height: 42px;
+      border: solid 3px $topaz;
+      text-align: center;
+      border-radius: 29px;
+      float: right;
+      .prc {
+        margin-left: 2px;
+        margin-top: 10px;
+        line-height: 35px;
+        color: $topaz;
+        font: $usfontbold;
+        text-align: center;
+      }
+    }
+    padding-top: 30px;
+  }
+
+  .lst {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 20%;
+    background-color: $white;
+    text-align: center;
+    .notactive {
+      border-radius: 70px;
+      margin: 0 0;
+      font-family: "Lato Regular";
+      border: solid 1px $grey;
+      line-height: 40px;
+      font-size: 12px;
+    }
+    .active {
+      @extend .notactive;
+      color: $topaz;
+      line-height: 36px;
+      font-size: 16px;
+      font-weight: bold;
+      border: solid 3px $topaz;
+    }
+  }
+
+  .elem {
+    border-bottom: solid 2px $topaz;
+    .activeheadline {
+      text-transform: uppercase;
+      color: $topaz;
+      font-size: 17px;
+      line-height: 40px;
+    }
+    .notactiveheadline {
+      @extend .activeheadline;
+      color: $brownish-grey;
+      margin-top: 0;
+      padding-top: 15px;
+    }
+
+    img {
+      margin-top: 5px;
+      width: 21px;
+      height: 29px;
+    }
+    .doc {
+      float: right;
+    }
+    .arrow {
+      margin-left: 40px;
+      margin-right: 10px;
+      float: right;
+      font-size: 20px;
+      &.down {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+div.elem:last-child {
+  margin-bottom: 30px;
+}
+
+.selectvar {
+  margin: 0 15px;
+  float: right;
+  font-size: 15px;
+  font-weight: 300;
+  color: $brownish-grey;
+  text-decoration: underline;
+}
+
+.selecct .buttn {
+  float: right;
+}
+.selecct {
+  padding-top: 30px;
+}
+
+.buttn {
+  padding-top: 35px;
+  padding-right: 13px;
+}
+
+.grbut {
+  float: right;
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: $topaz;
+  border: none;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  color: $white;
+}
+
+#notact {
+  padding-top: 70px;
+}
+
+.upborder {
+  border-top: solid 2px $topaz;
+}
+
+.padtopsev {
+  padding-top: 70px;
+}
+
+
+
+

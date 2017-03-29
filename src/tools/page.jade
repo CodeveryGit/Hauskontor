@@ -1,0 +1,39 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet", href="../assets/css/controls.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i")
+    body
+        h5 Darf der Mieter den Garten nutzen?
+        .container-fluid
+            .row
+                p.col-md-6.col-lg-6 Wenn es keinen Garten gibt, wählen Sie bitte „Nein“ aus.
+                p.col-md-6.col-lg-6 Soll der Mieter die Pflege des Gartens übernehmen?
+            .row
+                h5.col-md-6.col-lg-6 Wenn es keinen Garten gibt, wählen Sie bitte „Nein“ aus.
+                h5.col-md-6.col-lg-6 Soll der Mieter die Pflege des Gartens übernehmen?
+            .row
+                select.col-md-6.col-lg-6
+                    option Bitte auswählen
+                select.col-md-6.col-lg-6
+                    option Bitte auswählen
+            .row
+                p.col-md-3.col-lg-3 Soll der Mieter die Kosten für die Gartenpflege übernehmen?
+                p.col-md-3.col-md-offset-3.col-lg-3.col-lg-offset-3 Ab welchem Betrag ist die Zustimmung des Vermieters vor der Ausgabe einzuholen?
+            .row
+                .col-md-6.col-lg-6
+                    h5 Kostenübernahme
+                .col-md-6.col-lg-6
+                    h5 Zustimmungsbedürftiger Betrag
+            .row
+                select.col-md-6.col-lg-6
+                    option Bitte auswählen
+                input(type="text", placeholder="Lorem Ipsum Set dolor").col-md-6.col-lg-6
+            .row.container-fluid
+                .row
+                    h5.col-md-6.col-lg-6 Zusätzliche Vereinbarungen zur Gartenpflege
+                .row
+                    textarea.col-md-6.col-lg-6 Lorem Ipsum Set dolor
+            .row
+                div.button.col-md-1.col-md-offset-11.col-lg-1.col-lg-offset-11 Weiter

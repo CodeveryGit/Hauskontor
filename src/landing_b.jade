@@ -1,0 +1,201 @@
+extends tmpl/_header
+block template
+    //
+        Template Name: Landing B
+
+block body
+    body
+        img(class="preload", src!="<?php the_field('b_s1_bg'); ?>", style="display: none;")
+        div.head.clearfix.hide-notmobile.fixedhead
+            div.logo
+                a(href!="<?php the_field('header_logo_link', 456); ?>")
+                    img(src!="<?php the_field('header_logo', 456); ?>")
+            | <?php if (is_user_logged_in()): ?>
+            a(href!="<?php the_field('loggined_button_link', 456); ?>")
+                button.return.signup.login <?php the_field('loggined_button_text', 456); ?>
+            | <?php else: ?>
+            a(href!="<?php the_field('mobile_button_link', 456); ?>")
+                button.signup.login.Einloggen <?php the_field('mobile_button_text', 456); ?>
+            | <?php endif; ?>
+            div.phone.fixedphone
+                a(href!="<?php the_field('phone_link', 456); ?>")
+                    img(src!="<?php the_field('phone_icon', 456); ?>")
+                    div#shadow
+        div(style!="background-image: url(<?php the_field('b_s1_bg'); ?>)")#block1.background-b
+            div.head.clearfix.hide-onmobile
+                div.logo
+                    a(href!="<?php the_field('header_logo_link', 456); ?>")
+                        img(src!="<?php the_field('header_logo', 456); ?>")
+                | <?php if (is_user_logged_in()): ?>
+                a(href!="<?php the_field('loggined_button_link', 456); ?>")
+                    button.return.signup.login <?php the_field('loggined_button_text', 456); ?>
+                | <?php else: ?>
+                a(href!="<?php the_field('second_button_link', 456); ?>")
+                    button.signup.login <?php the_field('second_button_text', 456); ?>
+                a(href!="<?php the_field('first_button_link', 456); ?>")
+                    button.signup.whitehov <?php the_field('first_button_text', 456); ?>
+                | <?php endif; ?>
+                div.info
+                    p.infotext <?php the_field('phone_number', 456); ?>
+            div.cont.cont-b
+                h1.mainheadline#h1 <?php the_field('b_s1_headline'); ?>
+                h3.headline#h3 <?php the_field('b_s1_h3'); ?>
+                p.headline.p1.p-b.hide-onmobile <?php the_field('b_s1_p'); ?>
+                div.btndiv
+                    a(href!="<?php the_field('b_s1_mid_button_link'); ?>")
+                        button.btn-land.btn-land-b <?php the_field('b_s1_mid_button_text'); ?>
+        div#block2.block2-b
+            div.content.clearfix.padbot.padbot-b
+                div.lefttext
+                    h2.headline2.nomarg.marg-b <?php the_field('b_s2_headline'); ?>
+                    p.padtwony.p2.nopad <?php the_field('b_s2_p1'); ?>
+                    p.padtwony.p2.nopad#padp <?php the_field('b_s2_p2'); ?>
+                    p.padtwony.p2.nopad.moblastp <?php the_field('b_s2_p3'); ?>
+                div.pict.pict-b
+                    img(src!="<?php the_field('b_s2_image'); ?>").building.img-b
+        div(style!="background-image: url(<?php the_field('b_s3_bg'); ?>)")#block3.landing_b
+            div.content.clearfix
+                div.backgroundgradient.block2-gradient-b
+                h3.headline2.h2white <?php the_field('b_s3_headline'); ?>
+                div.block.blockpad-b.hide-onmobile
+                    div.quater
+                        div.circle 1
+                    div.quater
+                        div.circle 2
+                    div.quater
+                        div.circle 3
+                    div.quater.docimg
+                        img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/doc+galka.png")
+                    div.line
+                    div.steps
+                        h3.stepsheadline.stepshead-b <?php the_field('b_s3_step1'); ?>
+                    div.steps
+                        h3.stepsheadline.stepshead-b <?php the_field('b_s3_step2'); ?>
+                    div.steps
+                        h3.stepsheadline.stepshead-b <?php the_field('b_s3_step3'); ?>
+                    div.steps
+                        h3.stepsheadline.stepshead-b <?php the_field('b_s3_step4'); ?>
+                div.block.hide-notmobile
+                    div.steps
+                        div.quater
+                            div.circle.circle-b 1
+                        div.quater
+                            div.circle.circle-b 2
+                        div.quater
+                            div.circle.circle-b 3
+                        div.quater.docimg
+                            img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/doc+galka.png")
+                    div.vertline.vertline-b
+                    div.stepstext.stepstext-b
+                        div.quater
+                            h3.stepsheadline.quat.quat-b <?php the_field('b_s3_step1'); ?>
+                        div.quater
+                            h3.stepsheadline.quat.quat-b <?php the_field('b_s3_step2'); ?>
+                        div.quater
+                            h3.stepsheadline.quat.quat-b <?php the_field('b_s3_step3'); ?>
+                        div.quate
+                            h3.stepsheadline.quat.quat-b <?php the_field('b_s3_step4'); ?>
+        div#block4.block4-b
+            div.content
+                h3.headline2.letspace <?php the_field('b_s4_headline'); ?>
+                div.contain.contain-b.hide-onmobile
+                    div.row.imgmax
+                        div.custom1
+                            img(src!="<?php the_field('b_s4_image_1'); ?>")#img1
+                        div.custom1
+                            img(src!="<?php the_field('b_s4_image_2'); ?>")#img2.img2-b
+                        div.custom1
+                            img(src!="<?php the_field('b_s4_image_3'); ?>")#img3
+                    div.row.imgmax.padthirty.padthirty-b
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.firsth4.firsth4-b.customlineheight <?php the_field('b_s4_head_for_image_1'); ?>
+                            p.padtwony.p2.p3.notbold.textwidth.textwidth-b#1stp.customlineheight.p-line <?php the_field('b_s4_text_for_image_1'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.second-h4.second-h4-b.customlineheight <?php the_field('b_s4_head_for_image_2'); ?>
+                            p.padtwony.p2.p3.textwidth.textwidth-b.customlineheight.p-line <?php the_field('b_s4_text_for_image_2'); ?>
+                        div.custom1
+                            h4.stepsheadline.dark.textwidth.customlineheight <?php the_field('b_s4_head_for_image_3'); ?>
+                            p.padtwony.p2.p3.textwidth.textwidth-b.customlineheight.p-line <?php the_field('b_s4_text_for_image_3'); ?>
+
+                div.contain.hide-notmobile
+                    div.custom1
+                        img(src!="<?php the_field('b_s4_image_1'); ?>").img1
+                        h4.stepsheadline.dark.textwidth <?php the_field('b_s4_head_for_image_1'); ?>
+                        p.padtwony.p2.p3.notbold.textwidth.firstmobp <?php the_field('b_s4_text_for_image_1'); ?>
+                    div.custom1
+                        img(src!="<?php the_field('b_s4_image_2'); ?>").img3
+                        h4.stepsheadline.dark.textwidth <?php the_field('b_s4_head_for_image_2'); ?>
+                        p.padtwony.p2.p3.textwidth.third-mobile-p <?php the_field('b_s4_text_for_image_2'); ?>
+                    div.custom1
+                        img(src!="<?php the_field('b_s4_image_3'); ?>").img5
+                        h4.stepsheadline.dark.textwidth <?php the_field('b_s4_head_for_image_3'); ?>
+                        p.padtwony.p2.p3.textwidth <?php the_field('b_s4_text_for_image_3'); ?>
+        div(style!="background-image: url(<?php the_field('b_s5_bg'); ?>)")#block5.bg-b5
+            div.content
+                div.backgroundgradient2.grad-b-s5
+                p.headline.p1.p1-b.block5headline <?php the_field('b_s5_text'); ?>
+                div.btndiv.btndivlesspad.pad-b
+                    a(href!="<?php the_field('b_s5_button_link'); ?>")
+                        button.btn-land.btn-b.btn-b-b <?php the_field('b_s5_button_text'); ?>
+        div#section7.sect7
+            div#say.
+                <?php the_field('b_s6_text'); ?>
+            div#sign <?php the_field('b_s6_text_sign'); ?>
+        div#section6.sect6
+            input#immobilienubersicht.slider-radio(type="radio", name="slider-page", checked="checked")
+            input#kommunikation-mit-mietern.slider-radio(type="radio", name="slider-page")
+            input#dokumentenverwaltung.slider-radio(type="radio", name="slider-page")
+            input#dienstleistungen-buchen.slider-radio(type="radio", name="slider-page")
+            //div#slider-links
+            //    label#immobilienubersicht.link(for="immobilienubersicht") Immobilienübersicht
+            //    label#kommunikation-mit-mietern.link(for="kommunikation-mit-mietern") Kommunikation mit Mietern
+            //    label#dokumentenverwaltung.link(for="dokumentenverwaltung") Dokumentenverwaltung
+            //    label#dienstleistungen-buchen.link(for="dienstleistungen-buchen") Dienstleistungen buchen
+            //div#slider-arrows
+            //    div#backward
+            //        label#immobilienubersicht(for="immobilienubersicht") &#x276E;
+            //        label#kommunikation-mit-mietern(for="kommunikation-mit-mietern") &#x276E;
+            //        label#dokumentenverwaltung(for="dokumentenverwaltung") &#x276E;
+            //        label#dienstleistungen-buchen(for="dienstleistungen-buchen") &#x276E;
+            //    div#forward
+            //        label#immobilienubersicht(for="immobilienubersicht") &#x276F;
+            //        label#kommunikation-mit-mietern(for="kommunikation-mit-mietern") &#x276F;
+            //        label#dokumentenverwaltung(for="dokumentenverwaltung") &#x276F;
+            //        label#dienstleistungen-buchen(for="dienstleistungen-buchen") &#x276F;
+            div#slider-content.slider-cont-b.only-b
+                div#slider-header.header-b <?php the_field('b_s7_headline'); ?>
+                div#slider-page.page-b.pageheight-b.only-b
+                    div#immobilienubersicht
+                        p.padtwelve.only-b.
+                            <?php the_field('b_s7_p1'); ?>
+                        p.padtwelve.only-b.
+                            <?php the_field('b_s7_p2'); ?>
+                        p.padtwelve.only-b.
+                            <?php the_field('b_s7_p3'); ?>
+                        p.padtwelve.bold.
+                            <?php the_field('b_s7_p4'); ?>
+                    div#kommunikation-mit-mietern
+                    div#dokumentenverwaltung
+                    div#dienstleistungen-buchen
+                //div#slider-buttons
+                    //label#immobilienubersicht(for="immobilienubersicht")
+                    //label#kommunikation-mit-mietern(for="kommunikation-mit-mietern")
+                    //label#dokumentenverwaltung(for="dokumentenverwaltung")
+                    //label#dienstleistungen-buchen(for="dienstleistungen-buchen")
+            div#slider-image.slider-b.only-b
+                #tablet
+                    #image-placeholder
+                        img#immobilienubersicht(src!="<?php the_field('b_s7_slide'); ?>")
+                        img#kommunikation-mit-mietern
+                        img#dokumentenverwaltung
+                        img#dienstleistungen-buchen
+        div#section8.sect8
+            div#background.bg-b8(style!="background-image: url(<?php the_field('b_s8_bg'); ?>)")
+                div#grad-b-s8
+                    div.wrapper.wrapper-b
+                        div#line.line-b <?php the_field('b_s8_text'); ?>
+                        label
+                            button
+                            a(href!="<?php the_field('b_s8_button_link'); ?>")
+                                div.button.button-b <?php the_field('b_s8_button_text'); ?>
+        include tmpl/_footer

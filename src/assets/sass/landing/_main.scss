@@ -1,0 +1,116 @@
+@import "slider";
+@import "../partials/vars";
+
+html, body
+{
+    font-family: "Lato Regular";
+}
+
+div#section6
+{
+    height: 743.8px;
+    #slider-links
+    {
+        text-align: right;
+        padding-top: 31.3px;
+        padding-bottom: 16.4px;
+        @media screen and (max-width: 375px)
+        {
+            display: none;
+        }
+        @media screen and (min-width: 376px)
+        {
+            display: block;
+        }
+
+        .link
+        {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+    #slider-content
+    {
+        position: relative;
+        height: calc(100% - 47px);
+        width: 33.5%;
+        @media screen and (min-width: 376px)
+        {
+            float: left;
+        }
+        #slider-forward
+        {
+            height: 100%;
+            float: left;
+            @media screen and (max-width: 375px)
+            {
+                display: none;
+            }
+            label
+            {
+                margin: 0 26.9px 0 20px;
+                position: relative;
+                top: 50%;
+                margin-top: -24px;
+                color: white;
+                text-align: center;
+                line-height: 48px;
+                font-size: 24px;
+            }
+        }
+        #slider-header
+        {
+            font-size: 35px;
+            letter-spacing: 0.7px;
+        }
+        #slider-page
+        {
+            margin-top: 89.5px;
+            h3
+            {
+                font-size: 24px;
+                font-weight: 500;
+                font-style: italic;
+                margin-bottom: 10.9px;
+            }
+            p
+            {
+                margin-top: 10.9px;
+                font-size: 18px;
+                line-height: 1.44;
+            }
+        }
+    }
+    #slider-image
+    {
+        box-shadow: -3px 3px 20px 0px rgba(153,153,153,1);
+        box-sizing: border-box;
+        float: right;
+        padding: 48.3px 0 48.3px 48.3px;
+        background-color: #d8d8d8;
+        border-radius: 17px 0 0 17px;
+       /* width: 63.6%;*/
+       /* width: 814.6px;*/
+        height: 614.1px;
+        img
+        {
+            max-width: 764.9px;
+            width: 59.76%;
+        }
+    }
+    #slider-buttons
+    {
+        positioN: absolute;
+        bottom: 168.9px;
+        left: 95px;
+    }
+}
+
+div#section7
+{
+    height: 299.9px;
+    background-color: $topaz;
+}

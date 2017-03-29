@@ -1,0 +1,111 @@
+doctype html
+html
+    head
+        title Rechte & Pflichten
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width initial-scale=1.0")
+        link(href="../build/assets/css/forms_style.css", rel="stylesheet")
+        link(href="../build/assets/css/bootstrap.css", rel="stylesheet")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i")
+        script(src="assets/js/main.js")
+        script(src="assets/js/jquery-1.11.3.min.js")
+    body
+        div.mainblock.container
+            div#lst.clearfix
+                div.formsteps.clearfix
+                    div.lst
+                        p.notactive Parteien
+                    div.lst
+                        p.notactive Vertragsgegenstand
+                    div.lst
+                        p.notactive Mietkonditionen
+                    div.lst
+                        p.active Rechte & Pflichten
+                    div.lst
+                        p.notactive Fertigstellen
+                //div.dotted-line
+                div#perc.clearfix
+                    div.perc
+                        img(src="assets/img/progress-indicator.png").prc
+            div.elem
+                div.ell
+                    h3.activeheadline Gartennutzung
+                        img(src="assets/img/arrowleft.png").arrow
+                        img(src="assets/img/doc.png").doc
+            //step 1
+            div.contentt
+                div.row
+                    div.col-md-6
+                        h4.usualheadline Darf der Mieter den Garten nutzen?
+                div.row.padtop15
+                    div.col-md-6
+                        p.usualp Wenn es keinen Garten gibt, wählen Sie bitte „Nein“ aus.
+                    div.col-md-6
+                        p.usualp Soll der Mieter die Pflege des Gartens übernehmen?
+                div.row.padtop15
+                    div.col-md-6
+                        h4.usualheadline Gartennutzung
+                        select.inp
+                            option Ja
+                            option Nein
+                    div.col-md-6
+                        h4.usualheadline Gartenpflege
+                        select.inp
+                            option Ja
+                            option Nein
+                div.row.padtop15
+                    div.col-md-6
+                        p.usualp Soll der Mieter die Kosten für die Gartenpflege übernehmen?
+                    div.col-md-6
+                        p.usualp Ab welchem Betrag ist die Zustimmung des Vermieters vor der Ausgabe einzuholen?
+                div.row
+                    div.col-md-6
+                        h4.usualheadline Kostenübernahme
+                        select.inp
+                            option Ja
+                            option Nein
+                    div.col-md-6
+                        h4.usualheadline Zustimmungsbedürftiger Betrag
+                        input(type="text", placeholder="").inp
+                div.row.padtop15
+                    div.col-md-6
+                        h4.usualheadline Zusätzliche Vereinbarungen zur Gartenpflege
+                        textarea.form-control.noresize.textarea
+                div.selecct.clearfix
+                    a(href="#").selectvar Frage später beantworten
+                    a(href="#").selectvar zurück
+                div.buttn.clearfix
+                    button(type=submit).grbut Weiter
+            div.elem#notact
+                h3.notactiveheadline.upborder WEITERE RECHTE UND PFLICHTEN
+                    img(src="assets/img/arrowdown.png").arrow.down
+                    img(src="assets/img/doc2.png").doc
+            //step 2
+            div.contentt
+                div.txt
+                    h4.usualheadline Geben Sie hier sonstige Vereinbarungen an.
+                    p.usualp.padtop15.
+                        Die Regelungen zu baulichen Veränderungen, Schönheitsreparaturen, Tierhaltung und Untermiete sind gemäß der
+                        gesetzlichen Vorschriften im Sinne des Eigentümers gestaltet. Alle über die gesetzlich geregelten Rechte des Mieters
+                        hinausgehenden Absichten müssen vom Vermieter vorab gestattet werden.
+                    p.usualp.padtop15 Sollten Sie trotzdem zusätzliche Vereinbarungen treffen wollen, füllen Sie bitte die jeweiligen Felder aus:
+                div.pud
+                    div.row
+                        div.col-md-6
+                            h4.usualheadline Zusätzliche Vereinbarungen zu baulichen Veränderungen
+                            textarea.form-control.noresize.textarea
+                            h4.usualheadline.padtop15 Zusätzliche Vereinbarungen zur Untermiete
+                            textarea.form-control.noresize.textarea
+                        div.col-md-6
+                            h4.usualheadline Zusätzliche Vereinbarungen zur Tierhaltung
+                            textarea.form-control.noresize.textarea
+                            h4.usualheadline.padtop15 Zusätzliche Vereinbarungen zu Schöhnheitsreperaturen
+                            textarea.form-control.noresize.textarea
+                div.zenhomes.txt
+                    h4.usualheadline.zenhomes-h4 Hauskontor Tipp:
+                    p.usualp Wird unrenovierter oder renovierungsbedürftiger Wohnraum vermietet, trägt grundsätzlich der Vermieter die Erhaltungslast und wäre zu Schönhietsreparaturen verpflichtet. Dies ist nicht der Fall, wenn dem Mieter ein angemessener Ausgleich, bspw. in Form eines mietfreien Monats, gewährt wird.
+                div.selecct.clearfix
+                    a(href="#").selectvar Frage später beantworten
+                    a(href="#").selectvar zurück
+                div.buttn.clearfix
+                    button(type=submit).grbut Weiter

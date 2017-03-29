@@ -1,0 +1,58 @@
+extends tmpl/_header
+block template
+    //
+        Template Name: Jobs Fin
+
+block body
+    body
+        div#block
+            div.cont-jobs
+                div.finlogo
+                    img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/biglogo.png")
+                h1.mainheadline <?php the_field('headline'); ?>
+                p.p-d <?php the_field('text'); ?>
+                div.column#NewsletterAbonnieren
+                    div.body
+                        script.
+                            function post(address, body) {
+                                var request = new XMLHttpRequest();
+                                request.open("POST", address, true);
+                                request.send(new FormData(body));
+                            }
+                            document.addEventListener("DOMContentLoaded", function () {
+                                var emailPopup = document.querySelector("#email-popup");
+                                var greyBackground = document.querySelector("#grey-background");
+                                function close()
+                                {
+                                    greyBackground.style.display = "none";
+                                    emailPopup.style.display = "none";
+                                }
+                                emailPopup.querySelector("button").addEventListener("click", close);
+                                emailPopup.querySelector(".close").addEventListener("click", close);
+                                document.querySelector("form#emailform").addEventListener("submit", function (event) {
+                                    event.preventDefault();
+                                    greyBackground.style.display = "block";
+                                    emailPopup.style.display = "block";
+                                    post("//zenhomes.us13.list-manage.com/subscribe/post?u=77aaf650334f282ce52194467&amp;id=83cce8b1da", this);
+                                });
+                            });
+                        form(id="emailform")
+                            input#email(placeholder!="<?php the_field('input_placeholder'); ?>", type="email", name="EMAIL" required)
+                            input(type="hidden", name="b_77aaf650334f282ce52194467_83cce8b1da", value="")
+                            label
+                                button(value="Subscribe", name="subscribe")
+                                div.button
+                                    img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/footer/arrow.png")
+                #grey-background
+                #email-popup.subscribe-popup
+                    .subscribe-header
+                        span.subscribe-caption <?php the_field('thank_you'); ?>
+                        .close &#215;
+                    .subscribe-message <?php the_field('message'); ?>
+                    label
+                        button(value="Subscribe", name="subscribe")
+                        div.button <?php the_field('button_text'); ?>
+                    .subscribe-bottom
+                a(href!="<?php the_field('link'); ?>")
+                    h3.fin_under_h3 <?php the_field('link_text'); ?>
+        | <?php wp_footer(); ?>

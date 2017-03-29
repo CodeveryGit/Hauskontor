@@ -1,0 +1,75 @@
+extends tmpl/_header
+block template
+    //
+        Template Name: Contacts
+
+block body
+    body
+        img(class="preload", src!="<?php echo get_template_directory_uri(); ?>/assets/img/contacts/header.jpg", style="display: none;")
+        #contacts-popup.subscribe-popup
+            .subscribe-header
+                span.subscribe-caption Vielen Dank!
+                .close &#215;
+            .subscribe-message Wir beantworten Ihre Nachricht umgehend.
+            label
+                button(value="Subscribe", name="subscribe")
+                div.button Fertig
+            .subscribe-bottom
+        div.head.clearfix.hide-notmobile.fixedhead
+            div.logo
+                a(href!="<?php the_field('header_logo_link', 456); ?>")
+                    img(src!="<?php the_field('header_logo', 456); ?>")
+            | <?php if (is_user_logged_in()): ?>
+            a(href!="<?php the_field('loggined_button_link', 456); ?>")
+                button.return.signup.login <?php the_field('loggined_button_text', 456); ?>
+            | <?php else: ?>
+            a(href!="<?php the_field('mobile_button_link', 456); ?>")
+                button.signup.login.Einloggen <?php the_field('mobile_button_text', 456); ?>
+            | <?php endif; ?>
+            div.phone.fixedphone
+                a(href!="<?php the_field('phone_link', 456); ?>")
+                    img(src!="<?php the_field('phone_icon', 456); ?>")
+                    div#shadow
+        div#block1.background-b
+            div.head.clearfix.hide-onmobile
+                div.logo
+                    a(href!="<?php the_field('header_logo_link', 456); ?>")
+                        img(src!="<?php the_field('header_logo', 456); ?>")
+                | <?php if (is_user_logged_in()): ?>
+                a(href!="<?php the_field('loggined_button_link', 456); ?>")
+                    button.return.signup.login <?php the_field('loggined_button_text', 456); ?>
+                | <?php else: ?>
+                a(href!="<?php the_field('second_button_link', 456); ?>")
+                    button.signup.login <?php the_field('second_button_text', 456); ?>
+                a(href!="<?php the_field('first_button_link', 456); ?>")
+                    button.signup.whitehov <?php the_field('first_button_text', 456); ?>
+                | <?php endif; ?>
+                div.info
+                    p.infotext <?php the_field('phone_number', 456); ?>
+            div.cont.cont-b
+                h1.mainheadline#h1 <?php the_field('headline'); ?>
+                h3.headline#h3 <?php the_field('text'); ?>
+        div#section2
+            div#sect2-wrapper
+                .columnn#Hinterlassen
+                    img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/contacts/contacts_mail.png").mailIcon
+                    h1.header <?php the_field('mail_head'); ?>
+                    form#contact
+                        .half.left
+                            h5.caption <?php the_field('name'); ?>
+                            input(name="name",type="text", placeholder!="<?php the_field('name_placeholder'); ?>", required).input
+                            h5.caption.phonecap <?php the_field('phone'); ?>
+                            input(name="phone",type="tel", placeholder!="<?php the_field('phone_placeholder'); ?>", required).input
+                            h5.caption.mailcap <?php the_field('email'); ?>
+                            input(name="email",type="email", placeholder!="<?php the_field('email_placeholder'); ?>",required).input
+                        .half.right
+                            h5.caption <?php the_field('message'); ?>
+                            textarea(name="desc", placeholder!="<?php the_field('message_placeholder'); ?>", required).input
+                            .button
+                                input(type="submit", id="subm")
+                                label(for="subm") <?php the_field('button_text'); ?>
+                .columnn#Oder
+                    img(src!="<?php echo get_template_directory_uri(); ?>/assets/img/contacts/contacts_phone.png").phoneIcon
+                    h1.header <?php the_field('phone_head'); ?>
+                    h1.phoneNum <?php the_field("phone_num"); ?>
+        include tmpl/_footer

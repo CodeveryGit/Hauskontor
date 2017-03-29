@@ -1,0 +1,274 @@
+doctype html
+html
+    head
+        title Mietkonditionen
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width initial-scale=1.0")
+        link(href="../build/assets/css/forms_style.css", rel="stylesheet")
+        link(href="../build/assets/css/bootstrap.css", rel="stylesheet")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i")
+        script(src="assets/js/main.js")
+        script(src="assets/js/jquery-1.11.3.min.js")
+    body
+        div.mainblock.container
+            div#lst.clearfix
+                div.formsteps.clearfix
+                    div.lst
+                        p.notactive Parteien
+                    div.lst
+                        p.notactive Vertragsgegenstand
+                    div.lst
+                        p.active Mietkonditionen
+                    div.lst
+                        p.notactive Rechte & Pflichten
+                    div.lst
+                        p.notactive Fertigstellen
+                //div.dotted-line
+                div#perc.clearfix
+                    div.perc
+                        img(src="assets/img/progress-indicator.png").prc
+            div.elem
+                div.ell
+                    h3.activeheadline Mietdauer
+                        img(src="assets/img/arrowleft.png").arrow
+                        img(src="assets/img/doc.png").doc
+            //step 1
+            div.contentt
+                div.txt
+                    h4.usualheadline.
+                        Bitte geben Sie das Datum des Mietbeginns an. Möchten Sie das Mietverhältnis zeitlich befristen?
+                        Falls ja, aus welchem Grund soll die Befristung erfolgen?
+                    p.usualp.padtop15.
+                        Es gibt vier gesetzliche Befristungsgründe, aufgrund derer eine Befristung des Mietverhältnisses
+                        möglich ist. Nur wenn einer dieser vier Gründe greift, ist die Befristung zulässig. Der Grund
+                        muss zudem im Mietvertrag konkret bezeichnet werden.
+                    p.usualp.padtop15.
+                        Durch den Ausschluss der Kündigungsmöglichkeit binden sich Vermieter und Mieter für
+                        eine gewisse Zeit fest an den Vertrag. Dies ist für maximal vier Jahre möglich. Die
+                        Laufzeit des Kündigungsausschlusses berechnet sich nicht nach dem vereinbarten Mietbeginn,
+                        sondern nach dem Zeitpunkt des Vertragsschlusses, also dem Datum der letzten Unterschrift.
+                    div.zenhomes
+                        h4.usualheadline.zenhomes-h4 Hauskontor Tipp:
+                        p.usualp.
+                            Durch die Befristung endet der Mietvertrag zum vereinbarten Zeitpunkt, ohne dass eine
+                            Kündigung ausgesprochen werden muss. Es muss also keine Frist beachtet werden, was oft zu
+                            Problemen beim Auszug führen kann.
+                div.row.pud
+                    div.col-md-6
+                        h4.usualheadline Mietbeginn*
+                        input(type="text" onfocus="(this.type='date')" placeholder="DD/MM/YYYY").inp
+                        h4.usualheadline.padtop15 Mietende*
+                        input(type="text" onfocus="(this.type='date')" placeholder="DD/MM/YYYY").inp
+                    div.col-md-6
+                        h4.usualheadline Mietdauer*
+                        div.select-arrow
+                            select.inp
+                                option Befristet
+                                option Unbefristet
+                        h4.usualheadline.padtop15 Zustimmungsbedürftiger Betrag
+                        input(type="text", placeholder="Lorem Ipsum set dolor").inp
+                div.txt.pud
+                    p.usualp.
+                        Durch den Ausschluss der Kündigungsmöglichkeit binden sich Vermieter und Mieter
+                        für eine gewisse Zeit fest an den Vertrag. Dies ist für maximal vier Jahre möglich.
+                        Die Laufzeit des Kündigungsausschlusses berechnet sich nicht nach dem vereinbarten Mietbeginn,
+                        sondern nach dem Zeitpunkt des Vertragsschlusses, also dem Datum der letzten Unterschrift.
+                div.row.pud
+                    div.col-md-6.pud
+                        div.clearfx.checkbox-div
+                            div.floatleft
+                                h4.usualheadline Kündigungsverzicht
+                            div.checkbox.clearfix
+                                input(type="checkbox", id="kundigungsverzicht")
+                                label(for="kundigungsverzicht")
+                    div.col-md-6
+                            h4.usualheadline Dauer des Kündigungsverzichts in Monaten*
+                            select.inp
+                                option 00 Monate
+                div.selecct.clearfix
+                    a(href="#").selectvar Frage später beantworten
+                    a(href="#").selectvar zurück
+                div.buttn.clearfix
+                    button(type=submit).grbut Weiter
+            div.elem#notact
+                h3.notactiveheadline.upborder Miete
+                    img(src="assets/img/arrowdown.png").arrow.down
+                    img(src="assets/img/doc2.png").doc
+            //step 2
+            div.contentt
+                div.txt
+                    h4.usualheadline Geben Sie hier die Höhe der Miete und die Zahlungsmodalitäten an.
+                    p.usualp.padtop15.
+                        Um die Grundmiete festzulegen hilft Ihnen der örtliche Mietspiegel oder Haus-,
+                        Wohnungs- und Grundeigentümervereine. In der Grundmiete sind keine Betriebskosten, auch
+                        Nebenkosten genannt, enthalten.
+                    div.zenhomes
+                        h4.usualheadline.zenhomes-h4 Hauskontor Tipp:
+                        p.usualp.
+                            Die Mietpreisbremse gilt seit dem 1. Juni 2016 in Berlin. Die Miete darf hier die ortsübliche
+                            Vergleichsmiete höchstens um 10% übersteigen. Die Mietpreisbremse gilt seit September 2015 auch in weiteren
+                            Bundesländern. Gilt die Mietpreisbremse in Ihrem Bundesland nicht, sind Sie grundsätzlich in der Miethöhe
+                            und etwaiger vertraglicher Steigerungen frei.
+                div.pud
+                    div.row
+                        div.col-md-6
+                            h4.usualheadline Monatliche Kaltmiete*
+                            input(type="text", placeholder="Lorem Ipsum set dolor").inp
+                        div.col-md-6
+                            h4.usualheadline Tag der Zahlungsfirst (z.B. für den 3. des Monats: 3 eingeben)*
+                            input(type="text" onfocus="(this.type='date')" placeholder="DD/MM/YYYY").inp
+                div.txt.pud
+                    p.usualp.padtop15.
+                        Welche Nebenkosten sind noch zu tragen?
+                        Wollen Sie alle 17 in der Betriebskostenverordnung aufgeführten, umlagefähigen
+                        Betriebskosten oder eine eigene Aufstellung angeben?
+                    p.usualp.padtop15.
+                        Sind die Betriebskosten in einer Pauschale oder als Vorauszahlungen zu leisten?
+                        Bei einer Pauschale sind Heizkosten und Warmwasserkosten extra nach Verbrauch abrechnen.
+                div.row.pud
+                    div.col-md-6
+                        h4.usualheadline Monatliche Betriebskostenhöhe*
+                        input(type="text", placeholder="Lorem Ipsum set dolor").inp
+                    div.col-md-6
+                        h4.usualheadline Betriebskostenzahlung
+                        select.inp
+                            option Pauschale
+                            option Vorauszahlung
+                div.row.padtop15
+                    div.col-md-6
+                        h4.usualheadline Berechnung Betriebskosten
+                        select.inp
+                            option Gemäß Betriebskostenverordnung
+                            option Eigene angabe
+                    div.col-md-6
+                        h4.usualheadline Betriebskostenzahlung
+                        input(type="text", placeholder="Lorem Ipsum set dolor").inp
+                div.row.padtop15
+                    div.col-md-6
+                        h4.usualheadline Kontoinhaber*
+                        input(type="text", placeholder="Lorem Ipsum set dolor").inp
+                    div.col-md-6
+                        h4.usualheadline Name der Bank
+                        input(type="text", placeholder="Lorem Ipsum set dolor").inp
+                div.row.padtop15
+                    div.col-md-6
+                        h4.usualheadline IBAN*
+                        input(type="number", placeholder="Lorem Ipsum set dolor").inp
+                    div.col-md-6
+                        h4.usualheadline BIC
+                        input(type="number", placeholder="Lorem Ipsum set dolor").inp
+
+                div.selecct.clearfix
+                    a(href="#").selectvar Frage später beantworten
+                    a(href="#").selectvar zurück
+                div.buttn.clearfix
+                    button(type=submit).grbut Weiter
+            div.elem#notact
+                h3.notactiveheadline.upborder Kaution
+                    img(src="assets/img/arrowdown.png").arrow.down
+                    img(src="assets/img/doc2.png").doc
+            //step 3
+            div.contentt
+                div.txt
+                    h4.usualheadline In welcher Höhe möchten Sie die Kaution festlegen?
+                    p.usualp.padtop15.
+                        Barkaution oder Überweisung: Der Mieter darf die Kaution in 3 gleichen monatlichen
+                        Teilzahlungen, die erste bei Beginn des Mietverhältnisses, erbringen. Der Vermieter
+                        hat diese Summe dann bei einem Kreditinstitut zu einem für Sparanlagen mit dreimonatiger
+                        Kündigungsfrist üblichen Zinssatz getrennt von seinem Vermögen anzulegen.
+                        Die erwirtschafteten Zinsen stehen dem Mieter zu, was aber lediglich heißt, dass diese bei der
+                        Verrechnung mit Ansprüchen des Vermieters zu berücksichtigen sind. Hat der Vermieter das
+                        Geld nicht ordnungsgemäß angelegt, hat er die üblichen Zinsen trotz allem bei der
+                        Abrechnung zu berücksichtigen.
+                div.row.pud
+                    div.col-md-6
+                        h4.usualheadline Mietkautionshöhe (maximal das dreifache der monatlichen Grundmiete)*
+                        input(type="number", placeholder="0000").inp
+                div.txt.pud
+                    p.usualp.
+                        Bankbürgschaften: In einer Bankbürgschaft verpflichtet sich die Bank, auf
+                        erstes Anfordern des Vermieters den vereinbarten Kautionsbetrag für den Mieter zu zahlen.
+                    p.usualp.padtop15.
+                        Verpfändete Sparkonten: Der Mieter richtet selbst ein entsprechendes Sparkonto ein und
+                        verpfändet dieses für die Mietzeit an der Vermieter. Dieser kann dann ebenso wie bei einer
+                        Bankbürgschaft auf erstes Anfordern auf das Geld zugreifen.
+                div.row.pud
+                    div.col-md-6
+                        h4.usualheadline Art Mietkaution
+                        select.inp
+                            option Barkaution
+                            option Sparanlage
+                            option Bürgschaft
+                            option Sonstiges
+                    div.col-md-6
+                        h4.usualheadline Sonstige Mietkaution
+                        input(type="text", placeholder="0000").inp
+                div.selecct.clearfix
+                    a(href="#").selectvar Frage später beantworten
+                    a(href="#").selectvar zurück
+                div.buttn.clearfix
+                    button(type=submit).grbut Weiter
+            div.elem#notact
+                h3.notactiveheadline.upborder Mieterhöhung
+                    img(src="assets/img/arrowdown.png").arrow.down
+                    img(src="assets/img/doc2.png").doc
+            //step 4
+            div.contentt
+                div.row
+                    div.col-md-9
+                        h4.usualheadline Welche Regelungen zur Mieterhöhung möchten Sie anwenden?
+                        p.usualp.padtop15.
+                            Es gibt nur bestimmte Möglichkeiten die Miete während eines laufenden
+                            Mietverhältnisses zu anzupassen:
+                        p.usualp.list-p.padtop15.
+                            1. Staffelmiete: Vorab festgelegte Erhöhung der Miete.
+                            Der Mietpreis muss dabei mindestens 1 Jahr gleich bleiben.<br />
+                            2. Indexmiete: Kopplung an den Verbraucherpreisindex für Deutschland (VPI). <br />
+                            3. Die einseitige Vermietererklärung über die Erhöhung der Miete auf die
+                            ortsübliche Vergleichsmiete. Hierbei handelt es sich um ein gesetzliches
+                            Mieterhöhungsrecht, das nicht vertragliche geregelt werden muss.
+
+                        p.usualp.padtop15.
+                            Eine einvernehmliche Vereinbarung mit dem Mieter über die Änderung ist natürlich ebenfalls
+                            jederzeit möglich.
+                div.row.padtop15
+                    div.col-md-6
+                        h4.usualheadline Mieterhöhung
+                        select.inp
+                            option Nach gesetzlichen Bestimmungen
+                            option Indexmiete
+                            option Staffelmiete
+                        p.usualp.pub.padtop15 Bitte schreiben Sie hier die Staffelliste auf. Diese wird komplett in den Mietvertrag übernommen.
+                div.row.padtop15
+                    div.col-md-6
+                        h4.usualheadline Staffelliste
+                        textarea(placeholder="Staffelliste").form-control.noresize.textarea
+                div.zenhomes.txt#zengomes
+                    h4.usualheadline.zenhomes-h4 Hauskontor Tipp:
+                    p.usualp.
+                        Vorsicht bei Mietpreisüberhöhung! Beachten Sie die sogenannte “Wesentlichkeitsgrenze“
+                        von 20% über der ortsüblichen Vergleichsmiete. Diese bezieht sich beispielsweise auf einen
+                        einschlägigen Mietpreisspiegel.
+                div.row.pud
+                    div.col-md-6.pud
+                        div.clearfx.checkbox-div
+                            div.floatleft
+                                h4.usualheadline Kündigungsverzicht
+                            div.checkbox
+                                input(type="checkbox", id="kundigungsverzicht1")
+                                label(for="kundigungsverzicht1")
+                            div.floatright
+                                h4.usualheadline Nein
+                            div.checkbox.clearfix
+                                input(type="checkbox", id="kundigungsverzicht2")
+                                label(for="kundigungsverzicht2")
+                            div.floatright
+                                h4.usualheadline Ja
+                    div.col-md-6
+                        h4.usualheadline Dauer Kündigungsverzicht
+                        input(type="text", placeholder="Lorem Ipsum set dolor").inp
+                div.selecct.clearfix
+                    a(href="#").selectvar Frage später beantworten
+                    a(href="#").selectvar zurück
+                div.buttn.clearfix
+                    button(type=submit).grbut Weiter

@@ -1,0 +1,49 @@
+.text, .caption, .paragraph, .tip {
+  font-family: "Lato Regular";
+  font-size: 15px;
+  color: #626262; }
+
+.caption {
+  line-height: 1.6;
+  font-weight: bold;
+  display: inline-block; }
+
+.paragraph, .tip {
+  line-height: 1.4;
+  margin-top: 13px; }
+
+.tip {
+  border: 2px solid #1abc9c;
+  border-radius: 7px; }
+
+.control, .step {
+  font-family: "Lato Regular"; }
+  .control input, .step input {
+    display: none; }
+
+.step .header {
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid #1abc9c;
+  color: #626262;
+  font-size: 17px;
+  letter-spacing: 0.7px; }
+
+.step .header:after {
+  content: url(../img/tools/step-header-close.png);
+  display: inline-block;
+  float: right;
+  margin-right: 5px; }
+
+.step .content {
+  display: none; }
+
+.step input:checked ~ .header {
+  color: #1abc9c; }
+
+.step input:checked ~ .header:after {
+  content: url(../img/tools/step-header-open.png);
+  margin-right: 12px; }
+
+.step input:checked ~ .content {
+  display: block; }

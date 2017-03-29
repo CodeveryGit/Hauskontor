@@ -1,0 +1,152 @@
+doctype html
+html
+    head
+        title Hauskontor
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width initial-scale=1.0")
+        link(href="../build/assets/css/forms_style.css", rel="stylesheet")
+        link(href="../build/assets/css/bootstrap.css", rel="stylesheet")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i")
+        script(src="assets/js/main.js")
+        script(src="assets/js/jquery-1.11.3.min.js")
+    body
+        div.mainblock.container
+            include tmpl/list
+            div.elem
+                div.ell
+                    h3.activeheadline Vertragspartner
+                        img(src="assets/img/arrowleft.png").arrow
+                        img(src="assets/img/doc.png").doc
+            //step 1
+            div.contentt
+                div.txt
+                    h4.usualheadline Bitte geben Sie hier an, wie viele Personen in den Mietvertag aufgenommen werden sollen.
+                    p.usualp.padtop15 Im Normalfall wird der Vertrag zwischen einem Mieter und einem Vermieter geschlossen.Wenn weitere Personen in den Vertrag aufgenommen werden sollen, wählen Sie bitte aus.
+                    div.pud.clearfix
+                        div.inputhead
+                            h4.usualheadline Anzahl Mieter*
+                        div.inputcont
+                            input(type="number", placeholder="-").inp.s1
+                            div.inputcont.img
+                                img(src="assets/img/plus.png").plus
+                    div.clearfix.padtwony
+                        div.inputhead
+                            h4.usualheadline Anzahl Vermieter*
+                        div.inputcont
+                            input(type="number", placeholder="-").inp.s1
+                            div.inputcont.img
+                                img(src="assets/img/plus.png").plus
+                div.selecct.clearfix
+                    a(href="#").selectvar Frage später beantworten
+                    a(href="#").selectvar zurück
+                div.buttn.clearfix
+                    button(type=submit).grbut Weiter
+            div.elem#notact
+                h3.notactiveheadline.upborder Daten der Vermieter
+                    img(src="assets/img/arrowdown.png").arrow.down
+                    img(src="assets/img/doc2.png").doc
+            //step 2
+            div.contentt
+                div.txt
+                    h4.usualheadline Bitte geben Sie die Daten des Vermieters an.
+                    p.usualp Achten Sie auf die korrekte Schreibweise der Eingaben, da diese im Nachhinein nicht mehr änderbar sind.
+                div.pud
+                    div.clearfix
+                        div.width50
+                            h4.usualheadline Firma
+                            input(type="text", placeholder="").inp
+                    div.clearfix
+                        div.width50
+                            h4.usualheadline Anrede
+                            select.inp
+                                option Herr
+                                option Frau
+                        div.width25
+                            h4.usualheadline Vorname
+                            input(type="text", placeholder="").inp
+                        div.width25
+                            h4.usualheadline Name*
+                            input(type="text", placeholder="").inp
+                    div.clearfix
+                        div.width40
+                            h4.usualheadline Straße*
+                            input(type="text", placeholder="").inp
+                        div.width10
+                            h4.usualheadline.exception Haus-Nr.*
+                            input(type="number", placeholder="").inp
+                        div.width50
+                            h4.usualheadline Adresszusatz
+                            input(type="text", placeholder="").inp
+                    div.clearfix
+                        div.width20
+                            h4.usualheadline PLZ*
+                            input(type="number", placeholder="").inp
+                        div.width30
+                            h4.usualheadline Ort*
+                            input(type="text", placeholder="").inp
+                        div.width50
+                            h4.usualheadline Land*
+                            select.inp
+                                option Deutschland
+                                option Österreich
+                                option Schweiz
+                div.selecct.clearfix
+                    a(href="#").selectvar Frage später beantworten
+                    a(href="#").selectvar zurück
+                div.buttn.clearfix
+                    button(type=submit).grbut Weiter
+            div.elem
+                h3.notactiveheadline.lastelem Daten der Mieter
+                    img(src="assets/img/arrowdown.png").arrow.down
+                    img(src="assets/img/doc2.png").doc
+            //step 3
+            div.contentt
+                div.txt
+                    h4.usualheadline Bitte geben Sie die Daten des Vermieters an.
+                    p.usualp Achten Sie auf die korrekte Schreibweise der Eingaben, da diese im Nachhinein nicht mehr änderbar sind.
+                div.pud
+                    div.clearfix
+                        div.width50
+                            h4.usualheadline Firma
+                            input(type="text", placeholder="").inp
+                    div.clearfix
+                        div.width50
+                            h4.usualheadline Anrede
+                            select.inp
+                                option Herr
+                                option Frau
+                        div.width25
+                            h4.usualheadline Vorname
+                            input(type="text", placeholder="").inp
+                        div.width25
+                            h4.usualheadline Name*
+                            input(type="text", placeholder="").inp
+                    div.clearfix
+                        div.width40
+                            h4.usualheadline Straße*
+                            input(type="text", placeholder="").inp
+                        div.width10
+                            h4.usualheadline.exception Haus-Nr.*
+                            input(type="number", placeholder="").inp
+                        div.width50
+                            h4.usualheadline Adresszusatz
+                            input(type="text", placeholder="").inp
+                    div.clearfix
+                        div.width20
+                            h4.usualheadline PLZ*
+                            input(type="number", placeholder="").inp
+                        div.width30
+                            h4.usualheadline Ort*
+                            input(type="text", placeholder="").inp
+                        div.width50
+                            h4.usualheadline Land*
+                            select.inp
+                                option Deutschland
+                                option Österreich
+                                option Schweiz
+                div.selecct.clearfix
+                    a(href="#").selectvar Frage später beantworten
+                    a(href="#").selectvar zurück
+                div.buttn.clearfix.botbuttn
+                    button(type=submit).grbut Weiter
+        include tmpl/_footer
